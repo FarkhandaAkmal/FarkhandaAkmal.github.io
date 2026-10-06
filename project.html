@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#2f3e50" />
+    <meta name="description" content="Project details from Farkhanda Akmal's GIS portfolio." />
+    <meta property="og:title" content="Project | Farkhanda Akmal" />
+    <meta property="og:description" content="Project details from Farkhanda Akmal's GIS portfolio." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Project | Farkhanda Akmal" />
+    <meta name="twitter:description" content="Project details from Farkhanda Akmal's GIS portfolio." />
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
+    <link rel="stylesheet" href="assets/css/content.css" />
+    <link rel="stylesheet" href="assets/css/portfolio.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="assets/js/site.js" defer></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+    <script src="assets/js/project-art.js" defer></script>
+    <script src="assets/js/project.js" defer></script>
+    <title>Project | Farkhanda Akmal</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header" data-site-header>
+      <div class="header-inner page-shell">
+        <a class="wordmark" href="index.html" aria-label="Farkhanda Akmal, home"><span class="wordmark-stamp" aria-hidden="true">FA</span><span>Farkhanda Akmal</span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" data-menu-toggle><span class="menu-toggle-label">Menu</span><span class="menu-toggle-lines" aria-hidden="true"></span></button>
+        <nav class="site-nav" id="site-navigation" aria-label="Main navigation"><ul>
+          <li><a href="index.html">Home</a></li><li><a href="about.html">About me</a></li><li><a href="resume.html">Resume</a></li>
+          <li><a href="portfolio.html" aria-current="page">Portfolio</a></li><li><a href="publications.html">Publications</a></li><li><a href="contact.html">Contact</a></li>
+        </ul></nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <div class="project-error page-shell" data-project-error role="alert" hidden>
+        <p class="section-kicker">Project unavailable</p>
+        <h1>Project not found</h1>
+        <p data-project-error-message></p>
+        <a class="pill-button" href="portfolio.html">Back to portfolio</a>
+      </div>
+      <article class="project-content project-page" data-project-content hidden>
+        <div class="page-shell">
+          <p class="load-message" data-lead-image-error hidden></p>
+          <figure class="project-lead">
+            <div class="project-lead-visual" data-project-lead-visual></div>
+            <figcaption data-project-lead-credit></figcaption>
+          </figure>
+
+          <header class="project-detail-heading">
+            <p class="section-kicker" data-project-category></p>
+            <h1 data-project-title></h1>
+            <p class="project-subtitle" data-project-subtitle></p>
+          </header>
+
+          <dl class="project-facts" data-project-facts></dl>
+
+          <section class="project-location" data-project-map-section aria-labelledby="project-map-title" hidden>
+            <h2 id="project-map-title">Project locations</h2>
+            <p data-project-map-note></p>
+            <p class="load-message" data-project-map-error hidden></p>
+            <div class="project-location-map" data-project-map role="region" aria-label="Interactive map of project locations"></div>
+            <ul class="project-location-list" data-project-map-locations aria-label="Locations shown on the map"></ul>
+            <p class="project-map-credit">Location overview from the project location data · Map tiles © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap contributors</a></p>
+          </section>
+
+          <section class="project-description" aria-labelledby="project-description-title">
+            <h2 id="project-description-title">Project description</h2>
+            <p data-project-summary></p>
+          </section>
+
+          <section class="project-delivered" data-delivered-section aria-labelledby="delivered-title" hidden>
+            <h2 id="delivered-title">What was delivered</h2>
+            <ul data-project-delivered></ul>
+          </section>
+
+          <section class="project-role" data-role-section aria-labelledby="role-title" hidden>
+            <h2 id="role-title">My role</h2>
+            <p data-project-role></p>
+          </section>
+
+          <section class="project-gallery" data-gallery-section aria-labelledby="gallery-title" hidden>
+            <h2 id="gallery-title">Project images</h2>
+            <p class="load-message" data-gallery-error hidden></p>
+            <div class="project-gallery-grid" data-project-gallery></div>
+          </section>
+
+          <div class="project-related" data-project-related hidden></div>
+          <nav class="project-pagination" aria-label="Previous and next projects" data-project-pagination></nav>
+          <a class="pill-button pill-button-outline" href="portfolio.html">Back to portfolio</a>
+        </div>
+      </article>
+      <noscript><p class="noscript-message page-shell">Project details require JavaScript. View the <a href="resume.html">CV details</a> instead.</p></noscript>
+
+      <section class="contact-band content-band" aria-labelledby="contact-title">
+        <div class="contact-inner page-shell"><p class="section-kicker">Professional enquiries</p><h2 id="contact-title">Discuss this work</h2><p>For professional enquiries, please get in touch.</p><a class="pill-button pill-button-light" href="contact.html">Contact me</a></div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-main"><div class="page-shell footer-content">
+        <div><p class="footer-eyebrow">GIS · Land records · Research</p><h2>Farkhanda Akmal</h2><p>Lahore, Punjab, Pakistan</p></div>
+        <div class="footer-contact"><h3>Contact me</h3><div class="social-links">
+          <a class="social-link" href="https://www.linkedin.com/in/farkhandaakmal021" aria-label="LinkedIn profile" target="_blank" rel="noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 8.6H2.1V22h3.1V8.6ZM3.7 2a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 0 0 0-3.6ZM22 14.3c0-4-2.1-5.9-4.9-5.9a4.2 4.2 0 0 0-3.8 2.1V8.6h-3V22h3.1v-6.6c0-1.8.3-3.6 2.6-3.6s2.3 2.1 2.3 3.7V22h3.1l.6-7.7Z" /></svg></a>
+          <a class="social-link" href="contact.html" aria-label="Email Farkhanda Akmal" data-mail-user="falaknaz021" data-mail-domain="gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm9 8L4.5 7H4v10h16V7h-.5L12 13Zm0-2 7-5H5l7 5Z" /></svg></a>
+        </div></div>
+      </div></div>
+      <div class="copyright-bar"><div class="page-shell copyright-content"><span>© <span data-current-year></span> Farkhanda Akmal</span><span>All rights reserved</span></div></div>
+    </footer>
+    <button class="back-to-top" type="button" data-back-to-top aria-label="Back to top"><span aria-hidden="true">↑</span></button>
+
+    <dialog class="image-lightbox" data-lightbox aria-label="Project image viewer">
+      <div class="lightbox-header">
+        <p data-lightbox-count></p>
+        <button class="round-control" type="button" data-lightbox-close aria-label="Close image viewer">×</button>
+      </div>
+      <img class="lightbox-image" data-lightbox-image alt="" />
+      <p class="load-message" data-lightbox-error hidden></p>
+      <p class="lightbox-caption" data-lightbox-caption></p>
+      <div class="lightbox-controls">
+        <button class="round-control" type="button" data-lightbox-previous aria-label="Previous image">←</button>
+        <button class="round-control" type="button" data-lightbox-next aria-label="Next image">→</button>
+      </div>
+    </dialog>
+  </body>
+</html>

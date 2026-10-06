@@ -1,0 +1,148 @@
+@page {
+  size: A4;
+  margin: 16mm 15mm;
+}
+
+@media print {
+  :root {
+    color-scheme: light;
+  }
+
+  body {
+    background: #fff !important;
+    color: #111 !important;
+    font-family: Arial, sans-serif;
+    font-size: 10pt;
+    line-height: 1.35;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .site-header,
+  .site-footer,
+  .contact-band,
+  .back-to-top,
+  .skip-link,
+  .resume-actions,
+  .cv-note {
+    display: none !important;
+  }
+
+  .page-intro {
+    padding-block: 0 8mm;
+    background: transparent !important;
+  }
+
+  .page-intro h1 {
+    margin-bottom: 0;
+    font-size: 24pt;
+  }
+
+  .page-content {
+    padding-block: 0;
+  }
+
+  .page-content h2 {
+    margin-bottom: 3mm;
+    font-size: 14pt;
+    break-after: avoid;
+  }
+
+  .content-section + .content-section {
+    margin-top: 7mm;
+  }
+
+  .timeline {
+    gap: 3mm;
+    margin-top: 5mm;
+  }
+
+  .timeline::before {
+    left: 4mm;
+    transform: none;
+    background: #9c1f6b;
+  }
+
+  .timeline-item {
+    display: block;
+    break-inside: avoid;
+    padding-left: 10mm;
+  }
+
+  .timeline-item::before {
+    top: 5mm;
+    left: 4mm;
+    width: 3mm;
+    border: 0;
+    transform: translateX(-50%);
+    box-shadow: none;
+  }
+
+  .timeline-card,
+  .timeline-item:nth-child(odd) .timeline-card,
+  .timeline-item:nth-child(even) .timeline-card {
+    width: 100%;
+    margin: 0;
+    padding: 2.5mm 3mm;
+    border: 1px solid #cbd1d8;
+    box-shadow: none;
+  }
+
+  .timeline-card h3 {
+    font-size: 10pt;
+  }
+
+  .timeline-date,
+  .timeline-card p:last-child {
+    font-size: 9pt;
+  }
+
+  .resume-lower {
+    gap: 7mm;
+    break-before: page;
+    page-break-before: always;
+  }
+
+  .skill-group {
+    padding: 2mm 3mm;
+  }
+
+  .skill-group h3,
+  .training-panel summary {
+    font-size: 9pt;
+  }
+
+  .skill-group p,
+  .training-panel li {
+    font-size: 8.5pt;
+  }
+
+  .training-panel {
+    padding: 3mm;
+    box-shadow: none;
+  }
+
+  .training-panel details {
+    display: block;
+    margin-top: 3mm;
+    padding-top: 2mm;
+  }
+
+  .training-panel details > * {
+    display: block !important;
+  }
+
+  .training-panel ul {
+    gap: 1mm 4mm;
+    padding-left: 4mm;
+  }
+
+  a {
+    color: inherit !important;
+    text-decoration: none;
+  }
+
+  .page-shell {
+    width: 100%;
+  }
+}

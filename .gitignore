@@ -1,0 +1,12 @@
+# Original CVs and project reference documents must remain private.
+source-docs/
+
+# Unreviewed images extracted from private source documents.
+assets/img/raw/
+
+# Local editor and operating-system files.
+.DS_Store
+Thumbs.db
+.venv/
+.venv-1/
+.vscode/

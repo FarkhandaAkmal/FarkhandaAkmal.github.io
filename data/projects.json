@@ -1,0 +1,479 @@
+[
+  {
+    "id": "pulse",
+    "title": "Punjab Urban Land Systems Enhancement Project (PULSE)",
+    "category": "land-records",
+    "client": "Board of Revenue Punjab / Punjab Land Records Authority",
+    "funding": "World Bank",
+    "period": "2023 to present (Farkhanda's involvement)",
+    "location_label": "Punjab, Pakistan",
+    "coords": [[31.5204, 74.3587]],
+    "coord_labels": ["Lahore reference marker"],
+    "map_scope_note": "The Lahore pin is a city-level reference marker. PULSE is province-wide; this map does not show its full coverage or project boundaries.",
+    "summary": "PULSE is a province-wide programme to modernise land administration in Punjab. It is developing digital land records and a seamless cadastral map linked to the Land Records Management Information System, covering rural and urban land. The programme includes digitising remaining manual mouzas, georeferencing revenue maps (musavi), mapping parcels, linking maps to land records and checking spatial-data quality across the province.",
+    "delivered": [
+      "Digitisation of remaining manual mouzas",
+      "Georeferencing of revenue maps (musavi) and parcel mapping",
+      "Linking parcel maps to land records",
+      "Spatial-data quality assurance"
+    ],
+    "my_role": "",
+    "images": [],
+    "related_links": [],
+    "featured": true,
+    "confirmed": true
+  },
+  {
+    "id": "punjab-spatial-strategy",
+    "title": "Punjab Spatial Strategy",
+    "category": "spatial-planning",
+    "client": "Planning and Development Department, Government of the Punjab; executing agency: The Urban Unit",
+    "funding": "World Bank (Punjab Jobs and Competitiveness Program for Results)",
+    "period": "4 years (completed)",
+    "location_label": "Punjab, Pakistan",
+    "coords": [[31.5204, 74.3587]],
+    "coord_labels": ["Lahore reference marker"],
+    "map_scope_note": "The Lahore pin is a city-level reference marker. The strategy covers Punjab; this map does not show its full study area or project boundaries.",
+    "summary": "The Punjab Spatial Strategy provides a long-term framework for assessing the province's growth corridors and economic nodes and guiding public investment in infrastructure and industry. It brought together province-wide information on administrative boundaries down to mouza level, land cover and use, utilities, topography, industries, transport, water and public facilities. The work produced spatial analyses and knowledge products, including the Map Book of the Punjab.",
+    "delivered": [
+      "Primary and secondary GIS data collection",
+      "Spatial analysis and knowledge products",
+      "The Map Book of the Punjab"
+    ],
+    "my_role": "",
+    "images": [
+      {
+        "src": "assets/img/project-maps/banner-1200x525/pss-density-map-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/pss-density-map-card.webp",
+        "alt": "Punjab Spatial Strategy intra-city population-density analysis comparing 2005 and 2015 city density patterns.",
+        "caption": "Intra-city population-density analysis · 2005 and 2015",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      },
+      {
+        "src": "assets/img/project-maps/banner-1200x525/pss-boundaries-map-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/pss-boundaries-map-card.webp",
+        "alt": "GIS demarcation of local-government boundaries across Punjab, with city-level examples and growth-period legend.",
+        "caption": "Demarcation of local-government boundaries through GIS",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Map Book of the Punjab",
+        "url": "https://urbanunit.gov.pk/enewsletters/urbanatlas/files/basic-html/index.html"
+      }
+    ],
+    "featured": true,
+    "confirmed": true
+  },
+  {
+    "id": "uipt",
+    "title": "GIS Based Urban Immovable Property Tax System (UIPT)",
+    "category": "land-records",
+    "client": "Excise and Taxation Department, Punjab; executing agency: The Urban Unit",
+    "funding": "",
+    "period": "Jul 2013 to Jun 2014",
+    "location_label": "Lahore, Faisalabad, Gujranwala, Rawalpindi, Multan and Sialkot, Punjab",
+    "coords": [
+      [31.5204, 74.3587],
+      [31.4504, 73.135],
+      [32.1877, 74.1945],
+      [33.5651, 73.0169],
+      [30.1575, 71.5249],
+      [32.4945, 74.5229]
+    ],
+    "coord_labels": ["Lahore", "Faisalabad", "Gujranwala", "Rawalpindi", "Multan", "Sialkot"],
+    "map_scope_note": "Pins mark the six cities listed for this project. They are city-level references, not parcel-level tax maps.",
+    "summary": "This project computerised urban property tax and integrated it with GIS. After a pilot in Sialkot, the system was extended to five large districts that account for most of Punjab's property-tax demand. Property registers were scanned, parcels were digitised on satellite imagery, and field-survey records and property photographs were linked to a tax database. The system supported automated assessments and generation of demand notices.",
+    "delivered": [
+      "Digitised property parcels for five districts",
+      "Door-to-door survey data linked to GIS",
+      "Scanned PT-1 and PT-8 registers",
+      "Automated tax calculation and PT-10 demand notices"
+    ],
+    "my_role": "",
+    "images": [
+      {
+        "src": "assets/img/project-maps/banner-1200x525/uipt-map-redacted-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/uipt-map-redacted-card.webp",
+        "alt": "UIPT property-analysis map showing parcel boundaries and thematic land information.",
+        "caption": "UIPT · source parcel-analysis map",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      }
+    ],
+    "related_links": [],
+    "featured": true,
+    "confirmed": true
+  },
+  {
+    "id": "wheat-procurement",
+    "title": "Automation of Wheat Procurement System",
+    "category": "remote-sensing",
+    "client": "United Bank Limited and Food Department, Government of the Punjab; executing agency: The Urban Unit",
+    "funding": "",
+    "period": "Mar 2014 to Mar 2015",
+    "location_label": "Tehsil Dunyapur, District Lodhran, Punjab",
+    "coords": [[29.8, 71.74]],
+    "coord_labels": ["Dunyapur, Lodhran"],
+    "map_scope_note": "This is a locality marker for the Dunyapur pilot, not a mapped field boundary.",
+    "summary": "This pilot combined GIS and information technology to make wheat procurement and grower payments more transparent. Musavis for the tehsil were scanned and digitised on high-resolution satellite imagery, and growers were registered against their land parcels. Remote sensing was used to estimate wheat-growing area to support yield forecasting and procurement decisions. The resulting work included digitised parcels linked to records of rights, a grower database and a decision-support system.",
+    "delivered": [
+      "Digitised land parcels linked to records of rights",
+      "Wheat-area estimation using remote sensing",
+      "Grower database and decision-support system"
+    ],
+    "my_role": "",
+    "images": [],
+    "related_links": [],
+    "featured": false,
+    "confirmed": true
+  },
+  {
+    "id": "railways-land",
+    "title": "Asset Management of Pakistan Railways Land (GIS-based computerisation and MIS database)",
+    "category": "land-records",
+    "client": "Pakistan Railways; executing agency: The Urban Unit",
+    "funding": "",
+    "period": "Mar 2015 to Apr 2017",
+    "location_label": "Pakistan (Lahore and Sargodha markers)",
+    "coords": [
+      [31.5204, 74.3587],
+      [32.0836, 72.6711]
+    ],
+    "coord_labels": ["Lahore", "Sargodha"],
+    "map_scope_note": "Pins mark the listed city-level references, not the extent of railway land or surveyed boundaries.",
+    "summary": "This project developed a database and imagery view of Pakistan Railways land, harmonised with provincial revenue records so the status of land blocks could be queried. Revenue maps were collected, scanned, georeferenced and digitised, with physical surveys also carried out. In unsettled areas without revenue records, new musavis were constructed using adjacent mouza boundaries, DGPS surveys and tape measurements with revenue staff; boundary pillars were installed as reference marks.",
+    "delivered": [
+      "Georeferenced and digitised cadastral maps",
+      "Newly constructed musavis for unsettled areas",
+      "Land dashboard covering records, land use and encroachments"
+    ],
+    "my_role": "",
+    "images": [
+      {
+        "src": "assets/img/project-maps/banner-1200x525/railway-gis-map-redacted-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/railway-gis-map-redacted-card.webp",
+        "alt": "Pakistan Railways land GIS view with the railway corridor highlighted; fine parcel and record details are pixelated.",
+        "caption": "Railway land GIS view · parcel and record detail concealed",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      },
+      {
+        "src": "assets/img/project-maps/banner-1200x525/railway-land-source-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/railway-land-source-card.webp",
+        "alt": "Railway and provincial land-record workflow showing source records, mapping, field surveys and spatial data management.",
+        "caption": "Railway and provincial land-record workflow",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      }
+    ],
+    "related_links": [],
+    "featured": true,
+    "confirmed": true
+  },
+  {
+    "id": "flood-record-preservation",
+    "title": "Scanning and Preservation of Punjab Land Revenue Record in Flood-Affected Districts",
+    "category": "land-records",
+    "client": "Provincial Disaster Management Authority (PDMA) Punjab; executing agency: The Urban Unit",
+    "funding": "",
+    "period": "",
+    "location_label": "DG Khan, Muzaffargarh, Rajanpur, Layyah, Rahim Yar Khan, Bhakkar and Bahawalpur, Punjab",
+    "coords": [
+      [30.05, 70.64],
+      [30.07, 71.19],
+      [29.1, 70.33],
+      [30.96, 70.94],
+      [28.42, 70.3],
+      [31.63, 71.06],
+      [29.4, 71.68]
+    ],
+    "coord_labels": ["Dera Ghazi Khan", "Muzaffargarh", "Rajanpur", "Layyah", "Rahim Yar Khan", "Bhakkar", "Bahawalpur"],
+    "map_scope_note": "District-level reference markers for the listed flood-affected districts; the map does not show record coverage or cadastral boundaries.",
+    "summary": "After the 2010 floods damaged fragile paper cadastral maps, this project digitised land-revenue records from seven affected districts to preserve them and support integration with Punjab's spatial data infrastructure. The work described in the source material includes scanning, mosaicking, georeferencing and digitising the maps. The reference period of April to November 2011 predates Farkhanda's July 2012 start date, so her involvement dates are left unreported pending confirmation.",
+    "delivered": [
+      "Scanning and mosaicking of land-revenue maps",
+      "Georeferencing and digitisation of maps from seven districts",
+      "Digital preservation and integration with spatial data infrastructure"
+    ],
+    "my_role": "",
+    "images": [],
+    "related_links": [],
+    "featured": false,
+    "confirmed": true
+  },
+  {
+    "id": "space-tech-socioeconomic",
+    "title": "Space Technology Application in Socioeconomic Development",
+    "category": "",
+    "client": "",
+    "funding": "",
+    "period": "",
+    "location_label": "",
+    "coords": [],
+    "summary": "",
+    "delivered": [],
+    "my_role": "",
+    "images": [],
+    "related_links": [],
+    "featured": false,
+    "confirmed": false
+  },
+  {
+    "id": "ntrc-roads-directory",
+    "title": "Digitization of Roads Directory in the Country (NTRC)",
+    "category": "web-gis",
+    "client": "National Transport Research Centre (appears to be the client; confirm)",
+    "funding": "",
+    "period": "",
+    "location_label": "",
+    "coords": [],
+    "summary": "",
+    "delivered": [],
+    "my_role": "",
+    "images": [],
+    "related_links": [],
+    "featured": false,
+    "confirmed": false
+  },
+  {
+    "id": "rawalpindi-cadastral",
+    "title": "Cadastral Mapping of Rawalpindi Division (state land)",
+    "category": "land-records",
+    "client": "Survey of Pakistan",
+    "funding": "",
+    "period": "",
+    "location_label": "Rawalpindi Division, Pakistan",
+    "coords": [],
+    "summary": "This project covered scanning and georeferencing musavis and digitising cadastral parcels to khasra level. The work also included RTK GNSS field verification, a geodatabase and topology-based quality assurance.",
+    "delivered": [
+      "Scanning and georeferencing musavis",
+      "Khasra-level parcel digitisation and RTK GNSS field verification",
+      "Geodatabase and topology-based quality assurance"
+    ],
+    "my_role": "",
+    "images": [],
+    "related_links": [],
+    "featured": false,
+    "confirmed": true
+  },
+  {
+    "id": "slims-lahore",
+    "title": "State Land Information and Management System, Lahore District",
+    "category": "land-records",
+    "client": "Government of the Punjab",
+    "funding": "",
+    "period": "",
+    "location_label": "Lahore District, Punjab",
+    "coords": [],
+    "summary": "The described work maps state-land khasras using musavi and latha records with satellite imagery and an Android field survey. The source material identifies the project but does not confirm Farkhanda's participation, so the project remains an unapproved candidate.",
+    "delivered": [
+      "State-land khasra mapping from musavi and latha",
+      "Use of satellite imagery and Android field survey"
+    ],
+    "my_role": "",
+    "images": [],
+    "related_links": [],
+    "featured": false,
+    "confirmed": false
+  },
+  {
+    "id": "sheesh-mahal",
+    "title": "Mouza Sheesh Mahal: model urban land record study, Lahore (2012)",
+    "category": "land-records",
+    "client": "Punjab revenue authorities",
+    "funding": "",
+    "period": "2012",
+    "location_label": "Mouza Sheesh Mahal, Lahore, Punjab",
+    "coords": [],
+    "summary": "This 2012 urban land-record study compiled parcel-level information through DGPS and a house-to-house survey, supported by monitoring dashboards.",
+    "delivered": [
+      "Parcel-level urban land-record pilot",
+      "DGPS and house-to-house survey",
+      "Monitoring dashboards"
+    ],
+    "my_role": "",
+    "images": [
+      {
+        "src": "assets/img/project-maps/banner-1200x525/sheesh-mahal-map-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/sheesh-mahal-map-card.webp",
+        "alt": "Mouza Sheesh Mahal land-use and parcel map from the source document.",
+        "caption": "Mouza Sheesh Mahal · source land-use map",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      }
+    ],
+    "related_links": [],
+    "featured": false,
+    "confirmed": true
+  },
+  {
+    "id": "nankana-pilot",
+    "title": "District Nankana Sahib state land pilot",
+    "category": "land-records",
+    "client": "DC Office Nankana Sahib",
+    "funding": "",
+    "period": "",
+    "location_label": "District Nankana Sahib, Punjab",
+    "coords": [],
+    "summary": "This state-land pilot integrated khasra mapping with lease and land-status information in District Nankana Sahib.",
+    "delivered": [
+      "Khasra maps integrated with lease and ownership listings"
+    ],
+    "my_role": "",
+    "images": [
+      {
+        "src": "assets/img/project-maps/banner-1200x525/nankana-state-land-map-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/nankana-state-land-map-card.webp",
+        "alt": "District Nankana Sahib sample map showing state, leased and illegal-occupant land status.",
+        "caption": "Nankana Sahib state-land pilot · source map",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      }
+    ],
+    "related_links": [],
+    "featured": false,
+    "confirmed": true
+  },
+  {
+    "id": "fgehf-islamabad",
+    "title": "Spatial data management for FGEHF sectors, Islamabad",
+    "category": "land-records",
+    "client": "Federal Government Employees Housing Foundation",
+    "funding": "",
+    "period": "",
+    "location_label": "G-14, G-15, F-14 and Bara Kahu, Islamabad",
+    "coords": [],
+    "summary": "The project covered spatial data management for Federal Government Employees Housing Foundation sectors, including legal boundary mapping and encroachment assessment in G-14, G-15, F-14 and Bara Kahu. The source image is a sample from F-14, not a map of all project sectors.",
+    "delivered": [
+      "Legal boundary mapping",
+      "Encroachment assessment in G-14, G-15, F-14 and Bara Kahu"
+    ],
+    "my_role": "",
+    "images": [
+      {
+        "src": "assets/img/project-maps/banner-1200x525/fgehf-map-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/fgehf-map-card.webp",
+        "alt": "FGEHF F-14 property map showing covered land and built-up encroachment.",
+        "caption": "FGEHF · F-14 property-map sample",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      }
+    ],
+    "related_links": [],
+    "featured": false,
+    "confirmed": true
+  },
+  {
+    "id": "lrmis-spatial-pilot",
+    "title": "Punjab LRMIS spatial data pilot",
+    "category": "land-records",
+    "client": "PMU, Board of Revenue Punjab",
+    "funding": "World Bank assisted",
+    "period": "Feb to Nov 2014",
+    "location_label": "Lodhran, Punjab",
+    "coords": [],
+    "summary": "This pilot is described as mobile scanning and georeferencing of musavis and linking digitised musavis with the Punjab Land Records Management Information System in Lodhran. The reference dates the pilot from February to November 2014, but does not confirm Farkhanda's participation; it remains an unapproved candidate.",
+    "delivered": [
+      "Mobile musavi scanning and georeferencing",
+      "Pilot linkage of digitised musavi with LRMIS in Lodhran"
+    ],
+    "my_role": "",
+    "images": [],
+    "related_links": [],
+    "featured": false,
+    "confirmed": false
+  },
+  {
+    "id": "plga-2019-local-areas",
+    "title": "Mapping of Local Areas under the Punjab Local Government Act 2019",
+    "category": "spatial-planning",
+    "client": "Local Government and Community Development Department",
+    "funding": "",
+    "period": "",
+    "location_label": "Pilot in Kot Radha Kishan, Punjab",
+    "coords": [],
+    "summary": "This project supported the Punjab Local Government and Community Development Department in demarcating urban local areas, municipal and tehsil councils, neighbourhood councils and village panchayats under the Punjab Local Government Act 2019. The Kot Radha Kishan pilot compared boundary scenarios using census blocks and mouza boundaries, and produced GIS records for planning and decision-making.",
+    "delivered": [
+      "Demarcation of municipal corporations and committees",
+      "Demarcation of neighbourhood councils and village panchayats",
+      "Pilot in Kot Radha Kishan"
+    ],
+    "my_role": "",
+    "images": [
+      {
+        "src": "assets/img/project-maps/banner-1200x525/plga-census-boundary-map-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/plga-census-boundary-map-card.webp",
+        "alt": "Kot Radha Kishan urban and functional boundaries, urban blocks and rural blocks shown with project area statistics.",
+        "caption": "Kot Radha Kishan · urban and functional boundary map",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      },
+      {
+        "src": "assets/img/project-maps/banner-1200x525/plga-proposed-municipal-area-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/plga-proposed-municipal-area-card.webp",
+        "alt": "Two proposed municipal boundary scenarios for Kot Radha Kishan, comparing block-based and mouza-based references.",
+        "caption": "Kot Radha Kishan · proposed municipal boundary scenarios",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      }
+    ],
+    "related_links": [],
+    "featured": false,
+    "confirmed": true
+  },
+  {
+    "id": "paf-aviation-land-mapping",
+    "title": "Cadastral Mapping of Pakistan Air Force and Civil Aviation Land",
+    "category": "land-records",
+    "client": "Pakistan Air Force and Civil Aviation Authority",
+    "funding": "",
+    "period": "",
+    "location_label": "Lahore, Punjab (general reference)",
+    "coords": [],
+    "summary": "This assignment used revenue records and field verification to prepare khasra-level mapping of public-sector aviation land and clarify land status. The source map shows site boundaries and area details.",
+    "delivered": [
+      "Revenue-record-based cadastral mapping",
+      "Field verification and land-status mapping"
+    ],
+    "my_role": "",
+    "images": [
+      {
+        "src": "assets/img/project-maps/banner-1200x525/aviation-land-map-generalized-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/aviation-land-map-generalized-card.webp",
+        "alt": "PAF and Civil Aviation land source map showing site boundaries and area details.",
+        "caption": "PAF and Civil Aviation land mapping · source map",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      }
+    ],
+    "related_links": [],
+    "featured": false,
+    "confirmed": true
+  }
+]

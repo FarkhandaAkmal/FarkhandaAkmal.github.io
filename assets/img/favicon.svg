@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#2f3e50" />
+  <path d="M8 8h48v48H8zM8 32h24V8m0 24v24m0-24h24" fill="none" stroke="#ebd3e0" stroke-width="2" />
+  <circle cx="8" cy="8" r="4" fill="#eaac8b" />
+  <circle cx="56" cy="56" r="4" fill="#eaac8b" />
+  <text x="32" y="38" fill="#f4f6f9" font-family="Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle">FA</text>
+</svg>
