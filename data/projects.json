@@ -132,7 +132,18 @@
       "Grower database and decision-support system"
     ],
     "my_role": "",
-    "images": [],
+    "images": [
+      {
+        "src": "assets/img/project-maps/banner-1200x525/wheat-area-remote-sensing-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/wheat-area-remote-sensing-card.webp",
+        "alt": "Wheat-area mapping and remote-sensing analysis from the procurement-system project.",
+        "caption": "Wheat procurement · remote-sensing area analysis",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      }
+    ],
     "related_links": [],
     "featured": false,
     "confirmed": true
@@ -210,7 +221,18 @@
       "Digital preservation and integration with spatial data infrastructure"
     ],
     "my_role": "",
-    "images": [],
+    "images": [
+      {
+        "src": "assets/img/project-maps/banner-1200x525/flood-record-district-gis-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/flood-record-district-gis-card.webp",
+        "alt": "ArcMap view of digitised land-revenue records from a flood-affected district.",
+        "caption": "Flood-affected districts · digitised land-revenue records",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      }
+    ],
     "related_links": [],
     "featured": false,
     "confirmed": true
@@ -235,8 +257,8 @@
   {
     "id": "ntrc-roads-directory",
     "title": "Digitization of Roads Directory in the Country (NTRC)",
-    "category": "web-gis",
-    "client": "National Transport Research Centre (appears to be the client; confirm)",
+    "category": "",
+    "client": "",
     "funding": "",
     "period": "",
     "location_label": "",
@@ -253,11 +275,13 @@
     "id": "rawalpindi-cadastral",
     "title": "Cadastral Mapping of Rawalpindi Division (state land)",
     "category": "land-records",
-    "client": "Survey of Pakistan",
+    "client": "Survey of Pakistan; executing agency: The Urban Unit",
     "funding": "",
-    "period": "",
+    "period": "4 months",
     "location_label": "Rawalpindi Division, Pakistan",
-    "coords": [],
+    "coords": [[33.5651, 73.0169]],
+    "coord_labels": ["Rawalpindi reference marker"],
+    "map_scope_note": "The Rawalpindi pin is a city-level reference marker, not a cadastral boundary or the full project extent.",
     "summary": "This project covered scanning and georeferencing musavis and digitising cadastral parcels to khasra level. The work also included RTK GNSS field verification, a geodatabase and topology-based quality assurance.",
     "delivered": [
       "Scanning and georeferencing musavis",
@@ -274,21 +298,24 @@
     "id": "slims-lahore",
     "title": "State Land Information and Management System, Lahore District",
     "category": "land-records",
-    "client": "Government of the Punjab",
+    "client": "Government of the Punjab; executing agency: The Urban Unit",
     "funding": "",
     "period": "",
     "location_label": "Lahore District, Punjab",
-    "coords": [],
-    "summary": "The described work maps state-land khasras using musavi and latha records with satellite imagery and an Android field survey. The source material identifies the project but does not confirm Farkhanda's participation, so the project remains an unapproved candidate.",
+    "coords": [[31.5204, 74.3587]],
+    "coord_labels": ["Lahore"],
+    "map_scope_note": "The Lahore marker is an approximate city-level reference only; it does not show mapped khasra boundaries or the project extent.",
+    "summary": "State land in Lahore District was mapped at khasra level. Revenue maps (musavi and latha) were scanned, stitched and georeferenced against high-resolution satellite imagery, and land uses and permanent, semi-permanent and temporary structures were marked. A physical survey with an Android app verified the data, which was then linked to the spatial database of each khasra to show state land, leased land and illegal occupation.",
     "delivered": [
-      "State-land khasra mapping from musavi and latha",
-      "Use of satellite imagery and Android field survey"
+      "Khasra-level state land mapping from musavi and latha",
+      "Android-based field verification survey",
+      "Spatial database of state land, leases and occupation status"
     ],
     "my_role": "",
     "images": [],
     "related_links": [],
     "featured": false,
-    "confirmed": false
+    "confirmed": true
   },
   {
     "id": "sheesh-mahal",
@@ -298,7 +325,9 @@
     "funding": "",
     "period": "2012",
     "location_label": "Mouza Sheesh Mahal, Lahore, Punjab",
-    "coords": [],
+    "coords": [[31.5204, 74.3587]],
+    "coord_labels": ["Lahore reference marker"],
+    "map_scope_note": "The Lahore pin is a city-level reference marker, not the Mouza Sheesh Mahal boundary or surveyed parcel extent.",
     "summary": "This 2012 urban land-record study compiled parcel-level information through DGPS and a house-to-house survey, supported by monitoring dashboards.",
     "delivered": [
       "Parcel-level urban land-record pilot",
@@ -330,7 +359,9 @@
     "funding": "",
     "period": "",
     "location_label": "District Nankana Sahib, Punjab",
-    "coords": [],
+    "coords": [[31.45, 73.71]],
+    "coord_labels": ["Nankana Sahib reference marker"],
+    "map_scope_note": "The marker is a district-level reference point, not a state-land boundary or the pilot's full coverage.",
     "summary": "This state-land pilot integrated khasra mapping with lease and land-status information in District Nankana Sahib.",
     "delivered": [
       "Khasra maps integrated with lease and ownership listings"
@@ -360,7 +391,9 @@
     "funding": "",
     "period": "",
     "location_label": "G-14, G-15, F-14 and Bara Kahu, Islamabad",
-    "coords": [],
+    "coords": [[33.6844, 73.0479]],
+    "coord_labels": ["Islamabad reference marker"],
+    "map_scope_note": "The Islamabad pin is a city-level reference marker; the F-14 sample image does not show all project sectors or their boundaries.",
     "summary": "The project covered spatial data management for Federal Government Employees Housing Foundation sectors, including legal boundary mapping and encroachment assessment in G-14, G-15, F-14 and Bara Kahu. The source image is a sample from F-14, not a map of all project sectors.",
     "delivered": [
       "Legal boundary mapping",
@@ -387,21 +420,39 @@
     "id": "lrmis-spatial-pilot",
     "title": "Punjab LRMIS spatial data pilot",
     "category": "land-records",
-    "client": "PMU, Board of Revenue Punjab",
+    "client": "Project Management Unit, Board of Revenue, Government of the Punjab; executing agency: The Urban Unit",
     "funding": "World Bank assisted",
-    "period": "Feb to Nov 2014",
-    "location_label": "Lodhran, Punjab",
-    "coords": [],
-    "summary": "This pilot is described as mobile scanning and georeferencing of musavis and linking digitised musavis with the Punjab Land Records Management Information System in Lodhran. The reference dates the pilot from February to November 2014, but does not confirm Farkhanda's participation; it remains an unapproved candidate.",
+    "period": "Feb 2014 to Nov 2014",
+    "location_label": "Lodhran, Lahore and Hafizabad, Punjab",
+    "coords": [
+      [29.53, 71.63],
+      [31.5204, 74.3587],
+      [32.07, 73.68]
+    ],
+    "coord_labels": ["Lodhran", "Lahore", "Hafizabad"],
+    "map_scope_note": "Pins are approximate city-level references; they do not show pilot boundaries or full LRMIS coverage.",
+    "summary": "A spatial data pilot under the Punjab Land Records Management and Information Systems project. A mobile scanning capacity was built so that available musavis could be scanned and georeferenced, digitised musavis were linked with the land records system in a pilot for Lodhran tehsil, and the data was exposed over the web.",
     "delivered": [
       "Mobile musavi scanning and georeferencing",
-      "Pilot linkage of digitised musavi with LRMIS in Lodhran"
+      "Pilot linkage of digitised musavi with LRMIS in Lodhran",
+      "Web publishing of the linked data"
     ],
     "my_role": "",
-    "images": [],
+    "images": [
+      {
+        "src": "assets/img/project-maps/banner-1200x525/lrmis-spatial-pilot-overview-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/lrmis-spatial-pilot-overview-card.webp",
+        "alt": "Illustrated workflow showing musavi scanning, georeferencing, digitisation and linking spatial data with LRMIS.",
+        "caption": "Punjab LRMIS · musavi digitisation overview",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      }
+    ],
     "related_links": [],
     "featured": false,
-    "confirmed": false
+    "confirmed": true
   },
   {
     "id": "plga-2019-local-areas",
@@ -411,7 +462,9 @@
     "funding": "",
     "period": "",
     "location_label": "Pilot in Kot Radha Kishan, Punjab",
-    "coords": [],
+    "coords": [[31.17, 74.10]],
+    "coord_labels": ["Kot Radha Kishan reference marker"],
+    "map_scope_note": "The pin is an approximate town-level reference for the Kot Radha Kishan pilot, not a proposed or final administrative boundary.",
     "summary": "This project supported the Punjab Local Government and Community Development Department in demarcating urban local areas, municipal and tehsil councils, neighbourhood councils and village panchayats under the Punjab Local Government Act 2019. The Kot Radha Kishan pilot compared boundary scenarios using census blocks and mouza boundaries, and produced GIS records for planning and decision-making.",
     "delivered": [
       "Demarcation of municipal corporations and committees",
@@ -453,8 +506,10 @@
     "funding": "",
     "period": "",
     "location_label": "Lahore, Punjab (general reference)",
-    "coords": [],
-    "summary": "This assignment used revenue records and field verification to prepare khasra-level mapping of public-sector aviation land and clarify land status. The source map shows site boundaries and area details.",
+    "coords": [[31.5204, 74.3587]],
+    "coord_labels": ["Lahore reference marker"],
+    "map_scope_note": "The Lahore pin is a general city-level reference only; it does not identify aviation facilities, parcel boundaries or project sites.",
+    "summary": "This assignment used revenue records and field verification to prepare khasra-level mapping of public-sector aviation land and clarify land status. The public image is an abstracted colour mosaic; exact site geometry and parcel details are concealed.",
     "delivered": [
       "Revenue-record-based cadastral mapping",
       "Field verification and land-status mapping"
@@ -464,8 +519,8 @@
       {
         "src": "assets/img/project-maps/banner-1200x525/aviation-land-map-generalized-banner.webp",
         "thumbnail": "assets/img/project-maps/card-770x578/aviation-land-map-generalized-card.webp",
-        "alt": "PAF and Civil Aviation land source map showing site boundaries and area details.",
-        "caption": "PAF and Civil Aviation land mapping · source map",
+        "alt": "Abstracted colour mosaic derived from the aviation-land mapping source; exact site geometry and parcel detail are concealed.",
+        "caption": "PAF and Civil Aviation land mapping · abstracted source mosaic",
         "width": 1200,
         "height": 525,
         "thumbnailWidth": 770,
@@ -473,6 +528,623 @@
       }
     ],
     "related_links": [],
+    "featured": false,
+    "confirmed": true
+  },
+  {
+    "id": "metro-store-land",
+    "title": "Khasra mapping of Metro Store land, Lahore",
+    "category": "land-records",
+    "client": "Metro (Pvt.) Limited; executing agency: The Urban Unit",
+    "funding": "",
+    "period": "",
+    "location_label": "Main Airport Road, Lahore, Punjab",
+    "coords": [[31.5204, 74.3587]],
+    "coord_labels": ["Lahore reference marker"],
+    "map_scope_note": "The Lahore pin is an approximate city-level reference, not the Metro Store property boundary or surveyed khasras.",
+    "summary": "A khasra-level map of Property No. E-1 was prepared after field verification. The assignment identified which khasras fall inside the Metro store boundary and the area of each, following the demarcation rules of the revenue record.",
+    "delivered": [
+      "Khasra-level map of the property",
+      "Count and area of khasras within the store boundary",
+      "Field verification"
+    ],
+    "my_role": "",
+    "images": [
+      {
+        "src": "assets/img/project-maps/banner-1200x525/metro-store-land-map-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/metro-store-land-map-card.webp",
+        "alt": "Khasra-level boundary map of Metro Store land on Main Airport Road, Lahore; the parcel schedule is concealed.",
+        "caption": "Metro Store land · khasra mapping (parcel schedule concealed)",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      }
+    ],
+    "related_links": [],
+    "featured": false,
+    "confirmed": true
+  },
+  {
+    "id": "packages-mall-khasra",
+    "title": "Khasra-level mapping of Packages Mall and Packages Limited land, Lahore",
+    "category": "land-records",
+    "client": "Revenue Department, Government of the Punjab; executing agency: The Urban Unit",
+    "funding": "",
+    "period": "",
+    "location_label": "Lahore, Punjab",
+    "coords": [[31.5204, 74.3587]],
+    "coord_labels": ["Lahore reference marker"],
+    "map_scope_note": "The Lahore pin is a city-level reference marker, not the Packages Mall or Packages Limited property boundaries.",
+    "summary": "At the request of the Revenue Department, an Android-based field survey was carried out using the musavis of the area and surrounding mouzas to verify the boundaries of Packages Mall and Packages Limited in connection with a lease extension. Khasra-level mapping gave exact measurements of the mall and factory areas against the lease boundary.",
+    "delivered": [
+      "Android-based field survey using musavis",
+      "Khasra-level map of mall and factory land",
+      "Verification of boundaries against the lease area"
+    ],
+    "my_role": "",
+    "images": [
+      {
+        "src": "assets/img/project-maps/banner-1200x525/packages-mall-khasra-map-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/packages-mall-khasra-map-card.webp",
+        "alt": "Map of Packages Mall and Packages Limited land showing surveyed boundaries and land categories.",
+        "caption": "Packages Mall and Packages Limited · land mapping",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      }
+    ],
+    "related_links": [],
+    "featured": false,
+    "confirmed": true
+  },
+  {
+    "id": "lda-industrial-corridor",
+    "title": "Mapping for LDA proposed Industrial Corridor, Lahore Division",
+    "category": "spatial-planning",
+    "client": "Lahore Development Authority (LDA); executing agency: The Urban Unit",
+    "funding": "",
+    "period": "",
+    "location_label": "Lahore Division, Punjab",
+    "coords": [[31.5204, 74.3587]],
+    "coord_labels": ["Lahore reference marker"],
+    "map_scope_note": "The Lahore pin is an approximate city-level reference for a Lahore Division study; it does not show the proposed industrial-zone boundaries.",
+    "summary": "Land use and land cover mapping and a suitability analysis of eight proposed industrial zones in Lahore Division, based on six indicators provided by LDA under the plan approved in 2017. The analysis supported decisions on locating polluting industry and regularising the remaining non-polluting industry.",
+    "delivered": [
+      "Land use and land cover mapping",
+      "Suitability analysis of eight proposed zones on six indicators"
+    ],
+    "my_role": "",
+    "images": [],
+    "related_links": [],
+    "featured": false,
+    "confirmed": true
+  },
+  {
+    "id": "new-economic-city",
+    "title": "New Economic City: pre-feasibility for new city development along the M-2 Motorway corridor",
+    "category": "spatial-planning",
+    "client": "Housing, Urban Development and Public Health Engineering Department, Government of the Punjab; project management unit: The Urban Unit",
+    "funding": "",
+    "period": "Aug 2015 to Apr 2017",
+    "location_label": "M-2 Motorway corridor, Punjab (Lillah, Sukheki, Pindi Bhattian and Gujrat sites)",
+    "coords": [
+      [32.57, 72.80],
+      [31.87, 73.50],
+      [31.90, 73.27],
+      [32.57, 74.08]
+    ],
+    "coord_labels": ["Lillah", "Sukheki", "Pindi Bhattian", "Gujrat"],
+    "map_scope_note": "Pins identify the four named candidate-site locations approximately; they do not show the boundaries of any proposed city.",
+    "summary": "The New Economic City was planned to reduce urbanisation pressure on existing cities. Pre-feasibility studies assessed twelve candidate sites and identified four as most suitable: Lillah, Sukheki, Pindi Bhattian and Gujrat. Site studies covered geology, terrain, hydrology, demography, environment, agriculture and regional context, with mapping of potential sites against the transport network and settlements.",
+    "delivered": [
+      "Mapping of potential new city sites",
+      "Site studies and data collection",
+      "Pre-feasibility assessment of twelve candidate sites"
+    ],
+    "my_role": "",
+    "images": [
+      {
+        "src": "assets/img/project-maps/banner-1200x525/new-economic-city-potential-sites-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/new-economic-city-potential-sites-card.webp",
+        "alt": "Map of potential New Economic City sites along the M-2 Motorway corridor.",
+        "caption": "New Economic City · potential sites",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      },
+      {
+        "src": "assets/img/project-maps/banner-1200x525/new-economic-city-nankana-site-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/new-economic-city-nankana-site-card.webp",
+        "alt": "Proposed Nankana Sahib site map included in the New Economic City source material.",
+        "caption": "New Economic City · Nankana Sahib site map",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      },
+      {
+        "src": "assets/img/project-maps/banner-1200x525/new-economic-city-development-scenario-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/new-economic-city-development-scenario-card.webp",
+        "alt": "Development scenario diagram from the New Economic City pre-feasibility material.",
+        "caption": "New Economic City · development scenario",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      }
+    ],
+    "related_links": [],
+    "featured": false,
+    "confirmed": true
+  },
+  {
+    "id": "soon-valley-eco-tourism",
+    "title": "Master Plan for Eco-Tourism for Soon Valley 2040",
+    "category": "spatial-planning",
+    "client": "Tourism Development Corporation of Punjab, Government of the Punjab; executing agency: The Urban Unit",
+    "funding": "",
+    "period": "Aug 2014 to Jun 2018",
+    "location_label": "Soon Valley, Salt Range, Punjab",
+    "coords": [[32.58, 72.15]],
+    "coord_labels": ["Soon Valley"],
+    "map_scope_note": "The marker is an approximate Soon Valley reference point, not the master-plan boundary or tourism-site extents.",
+    "summary": "A master plan to develop Soon Valley in the Salt Range as a sustainable eco-tourism destination. The plan was built on assessments and stakeholder consultation and is supported by location, administrative boundary, elevation and facility maps of the valley and scenario mapping for Uchhali Lake.",
+    "delivered": [
+      "Soon Valley location and analysis maps",
+      "Uchhali Lake scenario mapping",
+      "Eco-tourism master plan to 2040"
+    ],
+    "my_role": "",
+    "images": [
+      {
+        "src": "assets/img/project-maps/banner-1200x525/soon-valley-location-map-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/soon-valley-location-map-card.webp",
+        "alt": "Location map of Soon Valley in the Salt Range, Punjab.",
+        "caption": "Soon Valley · location map",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      },
+      {
+        "src": "assets/img/project-maps/banner-1200x525/soon-valley-analysis-maps-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/soon-valley-analysis-maps-card.webp",
+        "alt": "Soon Valley analysis maps showing administrative, elevation and facility information.",
+        "caption": "Soon Valley · analysis maps",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      },
+      {
+        "src": "assets/img/project-maps/banner-1200x525/soon-valley-uchhali-lake-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/soon-valley-uchhali-lake-card.webp",
+        "alt": "Scenario comparison for Uchhali Lake in the Soon Valley eco-tourism master-plan material.",
+        "caption": "Soon Valley · Uchhali Lake scenario comparison",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      }
+    ],
+    "related_links": [],
+    "featured": false,
+    "confirmed": true
+  },
+  {
+    "id": "wasa-asset-management",
+    "title": "Punjab Cities Governance Improvement Project: asset management and network mapping for WASAs",
+    "category": "web-gis",
+    "client": "Planning and Development Department, Government of the Punjab; executing agency: The Urban Unit",
+    "funding": "World Bank",
+    "period": "Sep 2012 to Jun 2018",
+    "location_label": "Lahore, Faisalabad, Rawalpindi, Gujranwala and Multan, Punjab",
+    "coords": [
+      [31.5204, 74.3587],
+      [31.4504, 73.135],
+      [33.5651, 73.0169],
+      [32.1877, 74.1945],
+      [30.1575, 71.5249]
+    ],
+    "coord_labels": ["Lahore", "Faisalabad", "Rawalpindi", "Gujranwala", "Multan"],
+    "map_scope_note": "Pins mark the five listed cities as approximate references; they do not show WASA service areas or mapped network coverage.",
+    "summary": "Technical support to five large cities and their Water and Sanitation Agencies under the Punjab Cities Governance Improvement Project. The work included three-year rolling Integrated Development and Asset Management Plans, an asset management system, and GIS mapping of water supply and sewerage networks.",
+    "delivered": [
+      "Integrated Development and Asset Management Plan framework",
+      "Asset management system",
+      "GIS mapping of water supply and sewerage networks"
+    ],
+    "my_role": "",
+    "images": [
+      {
+        "src": "assets/img/project-maps/banner-1200x525/wasa-water-network-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/wasa-water-network-card.webp",
+        "alt": "GIS map of a WASA water-supply network.",
+        "caption": "WASA asset management · water-supply network",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      },
+      {
+        "src": "assets/img/project-maps/banner-1200x525/wasa-sewerage-network-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/wasa-sewerage-network-card.webp",
+        "alt": "GIS map of a WASA sewerage network.",
+        "caption": "WASA asset management · sewerage network",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      }
+    ],
+    "related_links": [],
+    "featured": false,
+    "confirmed": true
+  },
+  {
+    "id": "wssp-peshawar-survey",
+    "title": "GIS based consumer survey of WSSP Peshawar",
+    "category": "web-gis",
+    "client": "Water and Sanitation Program (WSP), World Bank; executing agency: The Urban Unit",
+    "funding": "",
+    "period": "2015",
+    "location_label": "Peshawar, Khyber Pakhtunkhwa",
+    "coords": [[34.0151, 71.5249]],
+    "coord_labels": ["Peshawar"],
+    "map_scope_note": "The Peshawar pin is a city-level reference, not the extent of the survey or a map of individual consumer parcels.",
+    "summary": "An ICT-based customer survey to update the consumer database of Water and Sanitation Services Peshawar with GIS features. The survey covered 66 urban union councils and mapped the city by water and sewerage connections, perception of services and willingness to pay, with results presented in an analytical dashboard.",
+    "delivered": [
+      "Consumer survey in 66 urban union councils",
+      "GIS mapping of water and sewerage connections",
+      "Analytical dashboard and Android application"
+    ],
+    "my_role": "",
+    "images": [
+      {
+        "src": "assets/img/project-maps/banner-1200x525/wssp-survey-dashboard-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/wssp-survey-dashboard-card.webp",
+        "alt": "WSSP Peshawar survey-monitoring dashboard showing city-level survey progress; account and consumer details are concealed.",
+        "caption": "WSSP Peshawar · survey monitoring dashboard",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      },
+      {
+        "src": "assets/img/project-maps/banner-1200x525/wssp-parcel-viewer-redacted-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/wssp-parcel-viewer-redacted-card.webp",
+        "alt": "WSSP Peshawar parcel viewer with consumer, parcel and surveyor information pixelated.",
+        "caption": "WSSP Peshawar · parcel viewer (personal details concealed)",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      }
+    ],
+    "related_links": [],
+    "featured": false,
+    "confirmed": true
+  },
+  {
+    "id": "rural-roads-monitoring",
+    "title": "GIS based monitoring for Khadim-e-Punjab Rural Roads Programme",
+    "category": "web-gis",
+    "client": "Communication and Works Department, Punjab; executing agency: The Urban Unit",
+    "funding": "",
+    "period": "Apr 2015 to Mar 2017",
+    "location_label": "Punjab, Pakistan",
+    "coords": [[31.5204, 74.3587]],
+    "coord_labels": ["Lahore reference marker"],
+    "map_scope_note": "The Lahore pin is a reference marker for a province-wide programme; it does not show the full road network or project boundaries.",
+    "summary": "Monitoring dashboards and Android applications to track quality and progress of the Khadim-e-Punjab Rural Roads Programme, a province-wide programme of widening, repair, rehabilitation and construction of rural roads. Road schemes can be browsed in a GIS viewer with progress, third-party validation results and site photographs.",
+    "delivered": [
+      "Monitoring dashboard",
+      "Four Android applications for departments, third-party validation, resident engineers and visitors",
+      "GIS viewer for road schemes"
+    ],
+    "my_role": "",
+    "images": [
+      {
+        "src": "assets/img/project-maps/banner-1200x525/rural-roads-dashboard-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/rural-roads-dashboard-card.webp",
+        "alt": "Khadim-e-Punjab Rural Roads Programme monitoring dashboard showing road progress by district.",
+        "caption": "Rural Roads Programme · monitoring dashboard",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      },
+      {
+        "src": "assets/img/project-maps/banner-1200x525/rural-roads-gis-viewer-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/rural-roads-gis-viewer-card.webp",
+        "alt": "GIS viewer for rural road schemes with programme filters and mapped road progress.",
+        "caption": "Rural Roads Programme · GIS viewer",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      }
+    ],
+    "related_links": [],
+    "featured": false,
+    "confirmed": true
+  },
+  {
+    "id": "sindh-adp-dashboard",
+    "title": "ADP monitoring dashboard for the Government of Sindh",
+    "category": "web-gis",
+    "client": "Economic Reform Unit, Finance Department, Government of Sindh; executing agency: The Urban Unit",
+    "funding": "",
+    "period": "Apr 2016 to Sep 2017",
+    "location_label": "Sindh, Pakistan",
+    "coords": [[24.8607, 67.0011]],
+    "coord_labels": ["Karachi reference marker"],
+    "map_scope_note": "The Karachi pin is an approximate city-level reference for a province-wide programme; it does not show scheme locations or boundaries.",
+    "summary": "A progress monitoring system for Sindh's Annual Development Programme, built to strengthen monitoring and evaluation of public sector schemes. It includes a dashboard with reports and indicators, a mobile data collection system, and a GIS viewer for browsing schemes.",
+    "delivered": [
+      "ADP monitoring dashboard with reporting module",
+      "Mobile data collection system",
+      "GIS viewer for schemes",
+      "Training for field and IT staff"
+    ],
+    "my_role": "",
+    "images": [
+      {
+        "src": "assets/img/project-maps/banner-1200x525/sindh-adp-gis-viewer-redacted-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/sindh-adp-gis-viewer-redacted-card.webp",
+        "alt": "Sindh ADP GIS viewer showing province-wide scheme locations and a blank details panel.",
+        "caption": "Sindh ADP · scheme GIS viewer",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      },
+      {
+        "src": "assets/img/project-maps/banner-1200x525/sindh-adp-satellite-scheme-redacted-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/sindh-adp-satellite-scheme-redacted-card.webp",
+        "alt": "Sindh ADP scheme view over satellite imagery with scheme-specific information concealed.",
+        "caption": "Sindh ADP · satellite scheme view (scheme details concealed)",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      }
+    ],
+    "related_links": [],
+    "featured": false,
+    "confirmed": true
+  },
+  {
+    "id": "fgehf-estate-wing",
+    "title": "Scanning, archiving and electronic document management for the Estate Wing, FGEHF",
+    "category": "land-records",
+    "client": "Federal Government Employees Housing Foundation; executing agency: The Urban Unit",
+    "funding": "",
+    "period": "Jan 2015 to Jul 2016",
+    "location_label": "Islamabad",
+    "coords": [[33.6844, 73.0479]],
+    "coord_labels": ["Islamabad"],
+    "map_scope_note": "The Islamabad pin is a city-level reference, not the boundary or location of the Estate Wing's individual files.",
+    "summary": "Modernisation of the Estate Wing of the Federal Government Employees Housing Foundation through an Electronic Document Management System. Approximately 25,000 files containing about 2.5 million pages were scanned and archived in a relational database, with file tracking and estate management modules to automate workflows.",
+    "delivered": [
+      "Scanning and archiving of approximately 25,000 files",
+      "File tracking system",
+      "Estate management system with litigation, file movement and reporting modules"
+    ],
+    "my_role": "",
+    "images": [],
+    "related_links": [],
+    "featured": false,
+    "confirmed": true
+  },
+  {
+    "id": "saaf-dehaat",
+    "title": "Khadim-e-Punjab Saaf Dehaat Programme and IT based monitoring of the Local Government Development Package",
+    "category": "web-gis",
+    "client": "Local Government and Community Development Department, Punjab; technical consultant: The Urban Unit",
+    "funding": "",
+    "period": "Dec 2017 to Dec 2018",
+    "location_label": "Punjab, Pakistan",
+    "coords": [[31.5204, 74.3587]],
+    "coord_labels": ["Lahore reference marker"],
+    "map_scope_note": "The Lahore pin is an approximate city-level reference for a province-wide programme, not a coverage boundary.",
+    "summary": "Technical support for a rural sanitation programme covering 3,281 union councils of Punjab. Monitoring dashboards were developed and managed for the one-time cleaning programme, the Saaf Dehaat Programme and around 8,000 schemes under the Local Government Development Package, supported by field engineers.",
+    "delivered": [
+      "Monitoring dashboards for cleaning and development schemes",
+      "Project design and procurement support",
+      "Long-term solid waste planning inputs including landfill site suitability"
+    ],
+    "my_role": "",
+    "images": [
+      {
+        "src": "assets/img/project-maps/banner-1200x525/saaf-dehaat-dashboard-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/saaf-dehaat-dashboard-card.webp",
+        "alt": "Saaf Dehaat dashboard showing district and union-council filters, programme progress and a GIS map; browser controls are cropped.",
+        "caption": "Saaf Dehaat · monitoring dashboard",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      }
+    ],
+    "related_links": [],
+    "featured": false,
+    "confirmed": true
+  },
+  {
+    "id": "pm-sdg-dashboard",
+    "title": "Prime Minister's Global SDGs Achievement Programme monitoring dashboard",
+    "category": "web-gis",
+    "client": "Cabinet Division and Planning and Development Department, Punjab; executing agency: The Urban Unit",
+    "funding": "",
+    "period": "Nov 2016 onwards",
+    "location_label": "Punjab, Pakistan",
+    "coords": [[31.5204, 74.3587]],
+    "coord_labels": ["Lahore reference marker"],
+    "map_scope_note": "The Lahore pin is an approximate city-level reference for a Punjab-wide programme; it does not show scheme coverage.",
+    "summary": "A dashboard to monitor infrastructure development schemes under the Prime Minister's Global Sustainable Development Goals Achievement Programme. It shows physical and financial progress of schemes with pictures, covering approvals, fund releases, procurement status and utilisation.",
+    "delivered": [
+      "Evidence-based progress monitoring of schemes",
+      "Real-time view of the financial portfolio",
+      "Decision support dashboard"
+    ],
+    "my_role": "",
+    "images": [
+      {
+        "src": "assets/img/project-maps/banner-1200x525/pm-sdg-dashboard-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/pm-sdg-dashboard-card.webp",
+        "alt": "Prime Minister's Global SDGs Achievement Programme dashboard with physical and financial progress indicators.",
+        "caption": "Global SDGs Achievement Programme · monitoring dashboard",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      }
+    ],
+    "related_links": [],
+    "featured": false,
+    "confirmed": true
+  },
+  {
+    "id": "eyris-pakistan",
+    "title": "Eyris Pakistan",
+    "category": "web-gis",
+    "client": "Planning and Development Department, Government of the Punjab; developed by The Urban Unit",
+    "funding": "",
+    "period": "2017 onwards",
+    "location_label": "Pakistan",
+    "coords": [[31.5204, 74.3587]],
+    "coord_labels": ["Lahore reference marker"],
+    "map_scope_note": "The Lahore pin is an approximate reference for a national indicator platform, not the platform's geographic coverage.",
+    "summary": "Eyris brings together and summarises data from many sources on indicators for Pakistan in one centralised database with standard names, time series and links to GIS maps. It supports a spatial planning approach to assessing and prioritising economic, social and environmental objectives.",
+    "delivered": [
+      "Centralised indicator database",
+      "Standardised nomenclature and temporal data",
+      "Linkage with GIS maps and summaries"
+    ],
+    "my_role": "",
+    "images": [
+      {
+        "src": "assets/img/project-maps/banner-1200x525/eyris-geographical-view-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/eyris-geographical-view-card.webp",
+        "alt": "Eyris Pakistan geographical indicator view with a map and linked information panel.",
+        "caption": "Eyris Pakistan · geographical view",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      },
+      {
+        "src": "assets/img/project-maps/banner-1200x525/eyris-overview-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/eyris-overview-card.webp",
+        "alt": "Eyris Pakistan overview diagram connecting national indicators with thematic objectives and GIS maps.",
+        "caption": "Eyris Pakistan · indicator overview",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      }
+    ],
+    "related_links": [],
+    "featured": false,
+    "confirmed": true
+  },
+  {
+    "id": "peasa",
+    "title": "Punjab Environmental Assessment System Application (PEASA)",
+    "category": "web-gis",
+    "client": "Environment Protection Department, Punjab; executing agency: The Urban Unit",
+    "funding": "",
+    "period": "",
+    "location_label": "Lahore, Punjab",
+    "coords": [[31.5204, 74.3587]],
+    "coord_labels": ["Lahore"],
+    "map_scope_note": "The Lahore pin is a city-level reference marker, not the system's service area or any facility location.",
+    "summary": "An environment monitoring and management system for the Environment Protection Department to manage applications for environmental approval from existing and new industries, with periodic reporting by industries. It includes web modules and an Android application for field inspection reports.",
+    "delivered": [
+      "IEE/EIA, complaints, and registration and certification modules",
+      "Android application for protection orders and complaint, site and lab inspection reports"
+    ],
+    "my_role": "",
+    "images": [],
+    "related_links": [],
+    "featured": false,
+    "confirmed": true
+  },
+  {
+    "id": "rural-development-package",
+    "title": "Rural Development Package monitoring dashboard",
+    "category": "web-gis",
+    "client": "Local Government and Community Development Department, Punjab; executing agency: The Urban Unit",
+    "funding": "",
+    "period": "",
+    "location_label": "Punjab, Pakistan",
+    "coords": [[31.5204, 74.3587]],
+    "coord_labels": ["Lahore reference marker"],
+    "map_scope_note": "The Lahore pin is an approximate city-level reference for a Punjab-wide package; it does not show all mapped schemes or coverage.",
+    "summary": "An online dashboard for real-time physical and financial progress of the Local Government Development Package for 3,281 union councils and 182 municipal committees across Punjab. All schemes were mapped in GIS, with progress uploaded through an Android application and shown at provincial, divisional, district, tehsil and union council level.",
+    "delivered": [
+      "GIS mapping of development schemes",
+      "Progress dashboard at five administrative levels",
+      "Android application for progress reporting"
+    ],
+    "my_role": "",
+    "images": [
+      {
+        "src": "assets/img/project-maps/banner-1200x525/rural-development-gis-viewer-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/rural-development-gis-viewer-card.webp",
+        "alt": "Rural Development Package GIS viewer with mapped schemes and a scheme-details panel; browser controls are cropped.",
+        "caption": "Rural Development Package · GIS viewer",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      },
+      {
+        "src": "assets/img/project-maps/banner-1200x525/rural-development-dashboard-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/rural-development-dashboard-card.webp",
+        "alt": "Rural Development Package dashboard showing scheme allocation, approval, release, procurement and progress totals.",
+        "caption": "Rural Development Package · monitoring dashboard",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      }
+    ],
+    "related_links": [],
+    "featured": false,
+    "confirmed": true
+  },
+  {
+    "id": "flood-2022-assessment",
+    "title": "Flash flood damage assessment 2022, DG Khan and Rajanpur",
+    "category": "remote-sensing",
+    "client": "",
+    "funding": "",
+    "period": "2022",
+    "location_label": "Dera Ghazi Khan and Rajanpur, Punjab",
+    "coords": [
+      [30.05, 70.64],
+      [29.10, 70.33]
+    ],
+    "coord_labels": ["Dera Ghazi Khan", "Rajanpur"],
+    "map_scope_note": "The pins are approximate city-level references; they do not show flood extent, affected households or assessment boundaries.",
+    "summary": "A spatial framework for assessing flash flood damage after the 2022 floods in Punjab, combining machine learning analysis with household-level survey data to support rapid assessment and disbursement of public funds to affected people. The work is published in the International Journal of Disaster Risk Reduction.",
+    "delivered": [
+      "Flood damage assessment framework",
+      "Integration of machine learning analysis with household survey data"
+    ],
+    "my_role": "",
+    "images": [],
+    "related_links": [
+      {
+        "label": "Journal article (2024)",
+        "url": "https://doi.org/10.1016/j.ijdrr.2024.104463"
+      }
+    ],
     "featured": false,
     "confirmed": true
   }

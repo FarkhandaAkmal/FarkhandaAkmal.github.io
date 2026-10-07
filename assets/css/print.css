@@ -60,7 +60,7 @@
   .timeline::before {
     left: 4mm;
     transform: none;
-    background: #9c1f6b;
+    background: var(--plum);
   }
 
   .timeline-item {

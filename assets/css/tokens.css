@@ -1,15 +1,15 @@
 :root {
   color-scheme: light;
 
-  --slate: #2f3e50;
-  --slate-deep: #222e3c;
+  --slate: #183b56;
+  --slate-deep: #102a43;
   --white: #ffffff;
-  --mist: #f4f6f9;
-  --plum: #9c1f6b;
-  --rose: #ebd3e0;
-  --peach: #eaac8b;
-  --text: #2b3440;
-  --text-muted: #5b6878;
+  --mist: #f3f7f7;
+  --plum: #0f766e;
+  --rose: #d9f0eb;
+  --peach: #f4a261;
+  --text: #263645;
+  --text-muted: #526679;
   --line: var(--mist);
   --focus-ring: var(--plum);
 

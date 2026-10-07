@@ -7,10 +7,10 @@ These items are not published on the website until confirmed.
 3. Approval or edits for the draft bio and hero positioning line.
 4. Two to four responsibility bullets for each role, including any shareable figures.
 5. Farkhanda's own role in each confirmed project (two or three sentences per project).
-6. Client, period, location, summary and category for "Space Technology Application in Socioeconomic Development"; details for "Digitization of Roads Directory (NTRC)".
+6. Client, period, location, summary and category for "Space Technology Application in Socioeconomic Development" and "Digitization of Roads Directory in the Country (NTRC)"; both remain unpublished until those details are supplied.
 7. Dates of Farkhanda's involvement in the flood-district record preservation project.
 8. Farkhanda's specific role and responsibilities on Mouza Sheesh Mahal, the District Nankana Sahib pilot, FGEHF Islamabad, the PLGA 2019 local-areas project, and the aviation-land mapping project.
-9. Farkhanda's role, responsibilities, and project period for Cadastral Mapping of Rawalpindi Division.
+9. Farkhanda's role and responsibilities for Cadastral Mapping of Rawalpindi Division (the supplied project duration is 4 months).
 10. User requested project-specific source maps. Every project location map uses confirmed project coordinates; its markers do not claim to show project boundaries or work products. Punjab Spatial Strategy has two maps from Reference Material 2: population-density analysis and local-government boundary demarcation. UIPT and FGEHF use privacy-redacted WebP maps; Sheesh Mahal and Nankana Sahib use cropped WebP maps. Pakistan Railways uses a pixelated GIS screenshot and a source-document land-record workflow overview. Raw source images remain private; the Nankana crop omits the adjacent occupant-name table. Reference Material 3 contains only the Rawalpindi project heading and no embedded image or location details; that project is published using its existing text and an explicitly illustrative graphic, without an invented source map or location marker. Reference Material 4's confirmed Kot Radha Kishan/PLGA project uses two WebP maps. The aviation-land mapping project is confirmed and uses an abstracted image mosaic; its original facility map and parcel cross-check remain private. The local [source-image shortlist](./assets/img/raw/source-image-shortlist.html) and [assignment draft](./assets/img/raw/assignments-draft.json) remain private review aids, not publication manifests. The draft image associations are based on nearby source text, captions or visible project labels:
    - Punjab Spatial Strategy: `reference material 2/image4.png`, `image5.png`; `image2.png` is a non-map graphic with named people and is not published.
    - UIPT: `reference material 2/image71.PNG`
@@ -34,6 +34,45 @@ These items are not published on the website until confirmed.
 - Git/GitHub setup is intentionally deferred until Phase 6. Keep the project local until then.
 - Review the contact sheet to confirm each image's project association and permission. Do not publish an image containing owner names, CNIC numbers or other personal land-ownership data.
 - The CV headshot is 196 x 206 px, below the preferred 800 x 800 px minimum. It is used on the Home and About pages while a higher-resolution photo is still requested.
+
+## Portfolio publication follow-up
+
+The owner-specified portfolio projects have been added using the supplied project content. The following published records still need owner input or an image before their pages are fully complete:
+
+| Published project | Empty period | Empty role | No image |
+| --- | --- | --- | --- |
+| Punjab Urban Land Systems Enhancement Project (PULSE) |  | Yes | Yes |
+| Punjab Spatial Strategy |  | Yes |  |
+| GIS Based Urban Immovable Property Tax System (UIPT) |  | Yes |  |
+| Automation of Wheat Procurement System |  | Yes |  |
+| Asset Management of Pakistan Railways Land (GIS-based computerisation and MIS database) |  | Yes |  |
+| Scanning and Preservation of Punjab Land Revenue Record in Flood-Affected Districts | Yes | Yes |  |
+| Cadastral Mapping of Rawalpindi Division (state land) |  | Yes | Yes |
+| State Land Information and Management System, Lahore District | Yes | Yes | Yes |
+| Mouza Sheesh Mahal: model urban land record study, Lahore (2012) |  | Yes |  |
+| District Nankana Sahib state land pilot | Yes | Yes |  |
+| Spatial data management for FGEHF sectors, Islamabad | Yes | Yes |  |
+| Mapping of Local Areas under the Punjab Local Government Act 2019 | Yes | Yes |  |
+| Cadastral Mapping of Pakistan Air Force and Civil Aviation Land | Yes | Yes |  |
+| Punjab LRMIS spatial data pilot |  | Yes |  |
+| Khasra mapping of Metro Store land, Lahore | Yes | Yes |  |
+| Khasra-level mapping of Packages Mall and Packages Limited land, Lahore | Yes | Yes |  |
+| Mapping for LDA proposed Industrial Corridor, Lahore Division | Yes | Yes | Yes |
+| New Economic City: pre-feasibility for new city development along the M-2 Motorway corridor |  | Yes |  |
+| Master Plan for Eco-Tourism for Soon Valley 2040 |  | Yes |  |
+| Punjab Cities Governance Improvement Project: asset management and network mapping for WASAs |  | Yes |  |
+| GIS based consumer survey of WSSP Peshawar |  | Yes |  |
+| GIS based monitoring for Khadim-e-Punjab Rural Roads Programme |  | Yes |  |
+| ADP monitoring dashboard for the Government of Sindh |  | Yes |  |
+| Scanning, archiving and electronic document management for the Estate Wing, FGEHF |  | Yes | Yes |
+| Khadim-e-Punjab Saaf Dehaat Programme and IT based monitoring of the Local Government Development Package |  | Yes |  |
+| Prime Minister's Global SDGs Achievement Programme monitoring dashboard |  | Yes |  |
+| Eyris Pakistan |  | Yes |  |
+| Punjab Environmental Assessment System Application (PEASA) | Yes | Yes | Yes |
+| Rural Development Package monitoring dashboard | Yes | Yes |  |
+| Flash flood damage assessment 2022, DG Khan and Rajanpur |  | Yes | Yes |
+
+Space Technology Application in Socioeconomic Development and Digitization of Roads Directory in the Country (NTRC) remain unconfirmed because client, period, location and summaries were not provided. The SLIMS Lahore source image named in the project brief was excluded: visual review confirmed it shows a Faisalabad government-building inventory rather than SLIMS. Project images that expose individual consumer or parcel data are redacted or omitted.
 
 ## Phase 1 status
 

@@ -51,6 +51,12 @@ function makePublicationCard(publication) {
   citation.className = "citation-full";
   citation.textContent = citationFor(publication);
   details.append(title, citation);
+  if (publication.citation_note) {
+    const note = document.createElement("p");
+    note.className = "citation-note";
+    note.textContent = publication.citation_note;
+    details.append(note);
+  }
 
   const actions = document.createElement("div");
   actions.className = "citation-actions";

@@ -67,12 +67,23 @@ const artDrawings = [
 ];
 let artInstance = 0;
 
+const artworkColors = {
+  "#2f3e50": "var(--slate)",
+  "#222e3c": "var(--slate-deep)",
+  "#f4f6f9": "var(--mist)",
+  "#9c1f6b": "var(--plum)",
+  "#ebd3e0": "var(--rose)",
+  "#eaac8b": "var(--peach)",
+};
+
 function artFor(index, className) {
   const holder = document.createElement("div");
   holder.className = className;
   const uniquePatternId = `parcel-pattern-${artInstance}`;
   artInstance += 1;
-  holder.innerHTML = artDrawings[index % artDrawings.length].replace(/g1/g, uniquePatternId);
+  holder.innerHTML = artDrawings[index % artDrawings.length]
+    .replace(/g1/g, uniquePatternId)
+    .replace(/#[\da-f]{6}/gi, (color) => artworkColors[color.toLowerCase()] || color);
   return holder.firstElementChild;
 }
 

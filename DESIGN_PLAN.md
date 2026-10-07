@@ -14,15 +14,15 @@ Use one light theme only; do not add automatic dark mode or a theme toggle.
 
 | Token | Value | Use |
 | --- | --- | --- |
-| `--slate` | `#2F3E50` | Navigation, hero and footer |
-| `--slate-deep` | `#222E3C` | Copyright strip and image overlays |
+| `--slate` | `#183B56` | Navigation, hero and footer |
+| `--slate-deep` | `#102A43` | Copyright strip and image overlays |
 | `--white` | `#FFFFFF` | Main content bands |
-| `--mist` | `#F4F6F9` | Alternate bands and text on dark bands |
-| `--plum` | `#9C1F6B` | Accent on light bands |
-| `--rose` | `#EBD3E0` | Accent on dark bands |
-| `--peach` | `#EAAC8B` | Small highlights and carousel counter |
-| `--text` | `#2B3440` | Body copy |
-| `--text-muted` | `#5B6878` | Captions and supporting information |
+| `--mist` | `#F3F7F7` | Alternate bands and text on dark bands |
+| `--plum` | `#0F766E` | Teal accent on light bands |
+| `--rose` | `#D9F0EB` | Mint accent on dark bands |
+| `--peach` | `#F4A261` | Warm highlight and carousel counter |
+| `--text` | `#263645` | Body copy |
+| `--text-muted` | `#526679` | Captions and supporting information |
 
 Montserrat is used for navigation, names, headings and buttons; Source Sans 3
 is used for body text. Body copy is 18 px with a 1.65 line height. Band padding

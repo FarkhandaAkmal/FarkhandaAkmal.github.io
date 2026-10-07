@@ -6,7 +6,7 @@ function addMapMarker(layer, coordinates, title, kind) {
     radius: 7,
     color: "#ffffff",
     weight: 2,
-    fillColor: kind === "project" ? "#9c1f6b" : "#eaac8b",
+    fillColor: kind === "project" ? "#0f766e" : "#f4a261",
     fillOpacity: 0.95,
   });
   const popup = document.createElement("div");

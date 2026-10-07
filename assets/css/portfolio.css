@@ -51,6 +51,66 @@
   transition: transform 280ms ease;
 }
 
+.project-illustration .art-ground-0,
+.project-illustration .art-ground-3 {
+  fill: var(--slate-deep);
+}
+
+.project-illustration .art-ground-1 {
+  fill: var(--slate);
+}
+
+.project-illustration .art-ground-2 {
+  fill: var(--plum);
+}
+
+.project-illustration .art-grid-line {
+  fill: none;
+  stroke: var(--mist);
+  stroke-opacity: 0.12;
+}
+
+.project-illustration .art-parcels path {
+  fill: var(--plum);
+  fill-opacity: 0.3;
+  stroke: var(--mist);
+  stroke-opacity: 0.85;
+  stroke-width: 2;
+}
+
+.project-illustration .art-parcels path:nth-child(3n + 2) {
+  fill: var(--peach);
+  fill-opacity: 0.38;
+}
+
+.project-illustration .art-parcels path:nth-child(3n) {
+  fill: var(--rose);
+  fill-opacity: 0.2;
+}
+
+.project-illustration .art-route {
+  fill: none;
+  stroke: var(--peach);
+  stroke-linecap: round;
+  stroke-width: 9;
+}
+
+.project-illustration .art-route-1,
+.project-illustration .art-route-3 {
+  stroke: var(--rose);
+}
+
+.project-illustration .art-parcel-labels {
+  fill: var(--mist);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  paint-order: stroke;
+  stroke: var(--slate-deep);
+  stroke-linejoin: round;
+  stroke-width: 2px;
+}
+
 .portfolio-overlay {
   position: absolute;
   inset: 0;

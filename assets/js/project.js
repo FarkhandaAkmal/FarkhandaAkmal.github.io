@@ -136,7 +136,7 @@ function renderProjectMap(project) {
       radius: 8,
       color: "#ffffff",
       weight: 2,
-      fillColor: "#9c1f6b",
+      fillColor: "#0f766e",
       fillOpacity: 0.95,
     });
     const popup = document.createElement("div");
