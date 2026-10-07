@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://farkhandaakmal.github.io/sitemap.xml

@@ -61,12 +61,26 @@
         "height": 525,
         "thumbnailWidth": 770,
         "thumbnailHeight": 578
+      },
+      {
+        "src": "assets/img/project-maps/banner-1200x525/pss-spatial-vision-2047-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/pss-spatial-vision-2047-card.webp",
+        "alt": "Spatial Vision of Punjab 2047 map showing transport corridors, industrial areas, crop zones and conservation areas across the province.",
+        "caption": "Spatial Vision of Punjab 2047",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
       }
     ],
     "related_links": [
       {
         "label": "Map Book of the Punjab",
         "url": "https://urbanunit.gov.pk/enewsletters/urbanatlas/files/basic-html/index.html"
+      },
+      {
+        "label": "Punjab Spatial Strategy brochure",
+        "url": "https://urbanunit.gov.pk/Download/publications/Files/12/2021/PSSBrochure.pdf"
       }
     ],
     "featured": true,
@@ -1135,16 +1149,211 @@
     "summary": "A spatial framework for assessing flash flood damage after the 2022 floods in Punjab, combining machine learning analysis with household-level survey data to support rapid assessment and disbursement of public funds to affected people. The work is published in the International Journal of Disaster Risk Reduction.",
     "delivered": [
       "Flood damage assessment framework",
+      "Flood-extent mapping from pre- and post-flood satellite images",
+      "Tehsil-wise flooded-area analysis for DG Khan and Rajanpur",
       "Integration of machine learning analysis with household survey data"
     ],
     "my_role": "",
-    "images": [],
+    "images": [
+      {
+        "src": "assets/img/project-maps/banner-1200x525/flood-2022-kotha-mir-flood-extent-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/flood-2022-kotha-mir-flood-extent-card.webp",
+        "alt": "Classified satellite map of flood extent around village Kotha Mir in Dera Ghazi Khan district, with built-up and cultivated land.",
+        "caption": "Flood extent around Kotha Mir, DG Khan district",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      },
+      {
+        "src": "assets/img/project-maps/banner-1200x525/flood-2022-tehsil-flooded-area-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/flood-2022-tehsil-flooded-area-card.webp",
+        "alt": "Maps of Dera Ghazi Khan and Rajanpur districts before and after the 2022 flash floods, with a table of flooded area by tehsil.",
+        "caption": "Tehsil-wise flooded area · DG Khan and Rajanpur",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      },
+      {
+        "src": "assets/img/project-maps/banner-1200x525/flood-2022-pre-post-imagery-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/flood-2022-pre-post-imagery-card.webp",
+        "alt": "Satellite images of two locations on 24 March 2022 and 28 August 2022, showing conditions before and after the floods.",
+        "caption": "Pre-flood and post-flood satellite imagery · March and August 2022",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      }
+    ],
     "related_links": [
       {
         "label": "Journal article (2024)",
         "url": "https://doi.org/10.1016/j.ijdrr.2024.104463"
       }
     ],
+    "featured": false,
+    "confirmed": true
+  },
+  {
+    "id": "kp-district-land-use-plans",
+    "title": "District Land Use Plans for Khyber Pakhtunkhwa",
+    "category": "spatial-planning",
+    "client": "Government of Khyber Pakhtunkhwa; prepared by The Urban Unit",
+    "funding": "",
+    "period": "",
+    "location_label": "Khyber Pakhtunkhwa, Pakistan (18 districts)",
+    "coords": [[33.5869, 71.4414]],
+    "coord_labels": ["Kohat (district shown in the sample maps)"],
+    "map_scope_note": "The Kohat pin marks the district shown in the sample maps. The project covered 18 districts of Khyber Pakhtunkhwa; this map does not show their boundaries.",
+    "summary": "Land use plans were prepared for 18 districts of Khyber Pakhtunkhwa for the provincial government, giving each district a base for its master planning. The mapping covered existing land use, land cover from satellite imagery, agricultural land classification and water areas. The Kohat district maps shown here are examples from the series.",
+    "delivered": [
+      "Land use plans for 18 districts",
+      "Land use and land cover mapping",
+      "Agricultural land and water-area mapping"
+    ],
+    "my_role": "",
+    "images": [
+      {
+        "src": "assets/img/project-maps/banner-1200x525/kp-kohat-land-use-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/kp-kohat-land-use-card.webp",
+        "alt": "Land use map of Kohat district, Khyber Pakhtunkhwa, with land use classes, tehsil boundaries and an inset location map.",
+        "caption": "District Kohat · land use",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      },
+      {
+        "src": "assets/img/project-maps/banner-1200x525/kp-kohat-land-cover-2022-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/kp-kohat-land-cover-2022-card.webp",
+        "alt": "Land use and land cover map of Kohat district for 2022, classified from Landsat imagery into agriculture, barren land, built-up area, shrubs and grass, tree cover and water.",
+        "caption": "District Kohat · land use and land cover, 2022",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      },
+      {
+        "src": "assets/img/project-maps/banner-1200x525/kp-kohat-agriculture-classification-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/kp-kohat-agriculture-classification-card.webp",
+        "alt": "Agricultural land classification map of Kohat district showing orchards, high and less productive agricultural land, barren land, range land and water bodies.",
+        "caption": "District Kohat · agricultural land classification",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      }
+    ],
+    "related_links": [],
+    "featured": false,
+    "confirmed": true
+  },
+  {
+    "id": "lahore-cropland-to-builtup",
+    "title": "Cropland to built-up conversion in Lahore District (2000 to 2016)",
+    "category": "remote-sensing",
+    "client": "The Urban Unit",
+    "funding": "",
+    "period": "2000 to 2016 (study period)",
+    "location_label": "Lahore District, Punjab",
+    "coords": [[31.5204, 74.3587]],
+    "coord_labels": ["Lahore reference marker"],
+    "map_scope_note": "The Lahore pin is a city-level reference; it does not show the district boundary or the mapped conversion areas.",
+    "summary": "A remote sensing study of where irrigated cropland in Lahore District was converted to built-up land between 2000 and 2016. Satellite images from the two dates were classified and compared to map the change across the district and within individual mouzas, showing how the city expanded onto farmland.",
+    "delivered": [
+      "Classification of satellite imagery for two dates",
+      "District map of cropland converted to built-up area",
+      "Mouza-level conversion maps with area figures"
+    ],
+    "my_role": "",
+    "images": [
+      {
+        "src": "assets/img/project-maps/banner-1200x525/lahore-cropland-builtup-mouza-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/lahore-cropland-builtup-mouza-card.webp",
+        "alt": "Map of a mouza in Lahore District showing the cropland converted to built-up land between 2000 and 2016, with a district inset and legend.",
+        "caption": "Cropland converted to built-up land in one mouza · 2000 to 2016",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      },
+      {
+        "src": "assets/img/project-maps/banner-1200x525/lahore-cropland-builtup-district-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/lahore-cropland-builtup-district-card.webp",
+        "alt": "Map of Lahore District with mouza boundaries, showing in red the cropland that became built-up area.",
+        "caption": "Lahore District · cropland converted to built-up area",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      },
+      {
+        "src": "assets/img/project-maps/banner-1200x525/lahore-land-cover-comparison-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/lahore-land-cover-comparison-card.webp",
+        "alt": "Two classified satellite images of Lahore District side by side, with the district boundary outlined in red.",
+        "caption": "Classified satellite images of Lahore District for the two study dates",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      }
+    ],
+    "related_links": [],
+    "featured": false,
+    "confirmed": true
+  },
+  {
+    "id": "punjab-affordable-housing-sites",
+    "title": "Punjab Affordable Housing Schemes: site surveys and land-use assessment",
+    "category": "spatial-planning",
+    "client": "Government of the Punjab; surveys and mapping by The Urban Unit",
+    "funding": "",
+    "period": "",
+    "location_label": "Punjab (sample site: Chak 168/10-R, Khanewal)",
+    "coords": [[30.3017, 71.9321]],
+    "coord_labels": ["Khanewal (district of the sample site)"],
+    "map_scope_note": "The Khanewal pin is a city-level reference for the sample site shown; it does not mark the site boundary or other scheme locations.",
+    "summary": "The Punjab Affordable Housing Schemes were launched to provide housing for low-income and marginalised communities. Selected land parcels were surveyed by drone and mapped, and the land use of each site and its surroundings was recorded to assess suitability for housing development. The maps shown are from the Chak 168/10-R site in Khanewal.",
+    "delivered": [
+      "Drone surveys of selected land parcels",
+      "Mapping of site and surrounding land use",
+      "Preliminary suitability assessment of sites"
+    ],
+    "my_role": "",
+    "images": [
+      {
+        "src": "assets/img/project-maps/banner-1200x525/affordable-housing-khanewal-site-land-use-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/affordable-housing-khanewal-site-land-use-card.webp",
+        "alt": "Drone image of the Chak 168/10-R site in Khanewal with agricultural land, barren land, pathways and solid waste mapped inside the site boundary.",
+        "caption": "Khanewal Chak 168/10-R site · land use within the site",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      },
+      {
+        "src": "assets/img/project-maps/banner-1200x525/affordable-housing-khanewal-drone-survey-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/affordable-housing-khanewal-drone-survey-card.webp",
+        "alt": "Drone image of the Chak 168/10-R site in Khanewal with the site boundary outlined in red.",
+        "caption": "Khanewal Chak 168/10-R site · drone image and site boundary",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      },
+      {
+        "src": "assets/img/project-maps/banner-1200x525/affordable-housing-khanewal-surrounding-land-use-banner.webp",
+        "thumbnail": "assets/img/project-maps/card-770x578/affordable-housing-khanewal-surrounding-land-use-card.webp",
+        "alt": "Map of land use within one kilometre of the Chak 168/10-R site in Khanewal, over satellite imagery.",
+        "caption": "Land use within a one-kilometre buffer of the site",
+        "width": 1200,
+        "height": 525,
+        "thumbnailWidth": 770,
+        "thumbnailHeight": 578
+      }
+    ],
+    "related_links": [],
     "featured": false,
     "confirmed": true
   }

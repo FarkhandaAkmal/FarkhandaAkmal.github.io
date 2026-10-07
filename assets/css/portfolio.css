@@ -384,6 +384,7 @@
 .gallery-open img {
   display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 4 / 3;
   object-fit: contain;
   transition: transform 200ms ease;

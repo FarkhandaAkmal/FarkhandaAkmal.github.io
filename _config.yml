@@ -1,0 +1,7 @@
+# GitHub Pages build settings.
+# Working notes and helper scripts stay in the repository but are not
+# published as pages of the website.
+exclude:
+  - TODO.md
+  - DESIGN_PLAN.md
+  - tools
