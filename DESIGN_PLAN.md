@@ -88,27 +88,38 @@ bar. Internal links remain relative for GitHub Pages sub-path hosting.
 - Verify keyboard use, contrast, data loading, and layouts at 380 px, 768 px
   and 1440 px before the Phase 2 review checkpoint.
 
-## Portfolio page: night theme (October 2026)
+## Site-wide dark theme (October 2026)
 
-At the owner's request, `portfolio.html` alone uses a dark "night pass"
-theme. The rest of the site keeps the light theme described above.
+At the owner's request the whole site now uses a dark "Premium Tech & GIS"
+theme. It replaces the light theme above on screen; printing still uses the
+light print styles, so the resume prints as before. No page text, link or
+image path was changed for it.
 
-- `portfolio.html` carries `class="theme-night"` on `<body>` and loads two
-  extra files after the shared ones: `assets/css/portfolio-night.css` and
-  `assets/js/portfolio-fx.js`. Every rule is scoped to `.theme-night`, so no
-  other page changes. Removing the class and the two files restores the
-  light page.
-- Fonts on this page: Space Grotesk for headings and numbers, Plus Jakarta
-  Sans for body text.
-- Colours: page `#040912`; text `#EAF4FF`; muted text `#93A9C3`. Each project
-  category has one signal colour, used on its filter pill and on its cards:
-  land records cyan `#22E4F2`, spatial planning blue `#5B8CFF`, remote sensing
-  emerald `#2EF2A0`, Web GIS violet `#B79CFF`.
-- Hero: a canvas survey network with a west-to-east swath, and a coordinate
-  readout that follows the pointer (the hero is mapped to the bounds of
-  Punjab; it shows Lahore when idle).
-- Cards: glass panels with the title always visible, a pointer-driven tilt,
-  lift and glow on hover or keyboard focus. On phones the blur is replaced by
-  a tinted panel for smoother scrolling.
-- Motion is switched off under `prefers-reduced-motion`, and the page stays
-  fully readable without JavaScript.
+- Every page carries `class="theme-dark"` on `<body>` and loads, after the
+  shared stylesheets, `assets/css/theme-dark.css`, plus Three.js r128 from
+  unpkg (with a Subresource Integrity hash), `assets/js/theme-bg.js` and
+  `assets/js/theme-fx.js`. The portfolio page also loads
+  `assets/js/portfolio-fx.js`. Removing the class and these files restores the
+  light site.
+- Background (`theme-bg.js`): a fixed WebGL canvas behind the page with a
+  dotted Earth, graticule, atmosphere glow, a ground-station ping at Lahore
+  and five satellites on orbits with trails. It turns slowly, leans and shifts
+  with the pointer, and drifts as the page scrolls. Without WebGL, or if the
+  library does not load, a still CSS backdrop is used instead.
+- Colours: page `#0B0F19`, cyan `#00FFFF`, emerald `#00FF66`; headings white,
+  running text `#A0B0C0`.
+- Glass panels: `rgba(255,255,255,0.03)` background, 16px blur, 1px
+  `rgba(0,255,255,0.15)` border, 16px radius. The navigation bar adds a darker
+  tint so the menu stays readable over bright maps. On phones the long lists
+  of cards use a tinted panel instead of blur, for smoother scrolling.
+- Fonts: Space Grotesk for headings and numbers, Plus Jakarta Sans for text.
+- Buttons and filters are neon pills with a radar-ping pulse on hover and on
+  the active filter. Project cards lift, tilt toward the pointer, glow, and
+  show faint contour lines on hover.
+- About: radar sweep behind the portrait; skills as floating badges.
+  Resume: the timeline is a route that lights up as the page scrolls.
+  Contact: the contact panel is styled as an instrument panel. The site has
+  no form; styles for form fields (cyan glow on focus) are ready if one is
+  added.
+- Motion is switched off under `prefers-reduced-motion`, and every page stays
+  readable without JavaScript.

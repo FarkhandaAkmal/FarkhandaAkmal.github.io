@@ -1,0 +1,1958 @@
+/* ==========================================================================
+   Dark "Premium Tech & GIS" theme, site-wide.
+
+   Loaded last on every page. Everything sits inside @media screen, so
+   printing (the resume in particular) still uses the light print styles.
+
+   Layers, back to front:
+     1. html background  - Deep Space Dark #0B0F19
+     2. .space-canvas    - the WebGL Earth (theme-bg.js), fixed behind the page
+     3. page content     - transparent bands with glass panels on top
+
+   Colours: cyan #00FFFF and emerald #00FF66 on #0B0F19.
+   Headings are white, running text is #A0B0C0.
+   ========================================================================== */
+
+@media screen {
+  :root {
+    color-scheme: dark;
+    scrollbar-color: #00c8d4 #070a12;
+    scrollbar-width: thin;
+
+    /* Existing design tokens, re-pointed for the dark theme. */
+    --slate: #ffffff;
+    --slate-deep: #070a12;
+    --white: rgb(255 255 255 / 3%);
+    --mist: #e8f1fa;
+    --plum: #00ffff;
+    --rose: #00ff66;
+    --peach: #00ff66;
+    --text: #a0b0c0;
+    --text-muted: #a0b0c0;
+    --line: rgb(0 255 255 / 15%);
+    --focus-ring: #00ffff;
+    --font-heading: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+    --font-body: "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+
+    /* Theme tokens. */
+    --space: #0b0f19;
+    --cyan: #00ffff;
+    --emerald: #00ff66;
+    --cyan-rgb: 0 255 255;
+    --emerald-rgb: 0 255 102;
+    --night-ink: #04121a;
+    --glass-bg: rgb(255 255 255 / 3%);
+    --glass-border: rgb(0 255 255 / 15%);
+    --glass-radius: 16px;
+    --text-glow: 0 1px 12px rgb(11 15 25 / 90%);
+    --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+    --topo: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300' preserveAspectRatio='xMidYMid slice'%3E%3Cpath fill='none' stroke='%2300ffff' stroke-width='1' d='M0 45 28 16 44 6 60 3 108 3 140 0 M183 0 220 22 240 27 264 23 307 0 M343 0 368 15 396 38 M0 203 11 188 13 180 11 172 0 158 M212 296 190 284 168 280 152 282 131 296 M27 296 0 283 M0 76 11 60 40 30 52 22 68 17 132 13 164 14 180 19 212 38 236 43 248 41 264 36 308 14 320 10 332 11 348 15 364 25 382 40 390 52 393 60 392 72 380 104 380 116 384 128 396 141 M78 296 52 292 28 283 15 276 5 264 1 244 6 224 16 210 38 192 42 180 35 168 11 144 0 120 M396 258 384 273 368 282 295 296 M242 296 196 272 172 264 152 261 136 266 108 290 87 296 M396 232 376 260 358 272 320 281 268 287 244 281 172 248 140 227 132 226 122 232 110 264 104 272 96 279 84 283 72 284 44 279 29 272 20 264 14 252 14 240 18 228 24 220 60 196 62 192 63 184 54 168 26 144 17 132 9 112 10 92 18 72 43 44 60 32 80 25 116 21 152 24 172 31 212 54 228 59 240 60 260 54 308 26 320 22 332 22 344 25 357 32 368 41 376 52 379 60 379 72 367 104 366 120 374 136 396 157 M396 208 375 244 364 256 352 263 332 270 304 275 280 276 260 273 189 240 176 228 164 204 156 197 144 194 108 193 92 187 29 132 21 116 20 96 24 84 31 72 45 56 60 43 84 32 120 29 144 32 164 39 221 76 248 100 260 103 268 97 273 72 288 52 312 36 324 33 336 34 355 44 362 52 366 60 365 76 351 108 351 116 354 128 361 140 386 164 396 177 M80 269 60 272 48 269 36 263 29 256 26 248 27 240 32 229 44 220 60 215 76 214 84 218 92 229 95 248 91 260 80 269Z M320 265 300 267 280 266 248 256 216 240 200 228 192 216 183 188 176 180 160 175 124 176 108 174 92 167 60 147 41 132 31 116 30 96 39 76 60 53 80 41 108 35 136 38 160 47 195 72 212 88 228 112 236 120 248 125 264 126 286 120 293 116 300 108 302 100 297 72 300 64 306 56 316 49 324 47 336 48 343 52 350 60 350 72 345 84 332 104 330 116 335 128 344 140 380 176 384 184 386 196 378 220 362 244 344 257 320 265Z M68 253 60 256 49 252 46 248 46 240 56 234 67 236 72 244 68 253Z M320 257 296 258 276 255 252 245 224 230 213 220 208 212 198 172 188 163 172 160 132 163 112 162 92 155 64 139 48 126 40 112 40 96 47 80 64 60 84 47 108 42 132 44 160 56 189 80 205 100 218 128 228 136 248 139 304 135 316 138 324 143 363 176 370 188 372 200 366 220 353 240 340 250 320 257Z M164 148 136 152 116 151 92 144 69 132 55 120 50 108 50 96 57 80 76 59 88 53 100 49 128 50 152 60 168 72 184 88 192 100 198 116 198 128 192 138 182 144 164 148Z M320 248 300 250 280 246 256 236 232 220 222 208 217 192 218 172 224 160 232 155 248 151 276 148 296 149 317 156 344 176 352 185 357 196 356 216 344 236 332 244 320 248Z M144 140 124 141 104 137 84 130 69 120 63 112 60 100 64 85 73 72 92 59 116 55 140 62 165 80 180 100 183 112 182 120 178 128 172 132 160 137 144 140Z M312 240 296 240 281 236 263 228 245 216 238 208 232 196 232 184 237 172 244 166 256 161 284 159 308 166 328 180 341 196 344 204 343 216 339 224 332 232 324 237 312 240Z M148 128 132 130 116 129 88 120 77 112 73 104 72 96 75 84 88 70 104 64 124 64 140 71 159 88 167 104 168 112 164 119 148 128Z M308 229 296 228 284 225 260 212 252 204 248 196 248 188 252 180 264 173 284 172 300 177 316 188 325 200 327 212 320 224 308 229Z M136 117 116 117 96 110 87 100 86 92 89 84 98 76 112 72 124 74 136 80 147 92 150 104 146 112 136 117Z'/%3E%3C/svg%3E");
+  }
+
+  html {
+    background: var(--space);
+  }
+
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #070a12;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border: 3px solid #070a12;
+    border-radius: 999px;
+    background: linear-gradient(180deg, var(--cyan), var(--emerald));
+  }
+
+  .theme-dark {
+    background: transparent;
+    color: var(--text);
+    font-size: 1.0625rem;
+    text-shadow: var(--text-glow);
+  }
+
+  .theme-dark ::selection {
+    background: var(--cyan);
+    color: var(--night-ink);
+    text-shadow: none;
+  }
+
+  .theme-dark :focus-visible {
+    outline: 2px solid var(--cyan);
+    outline-offset: 4px;
+  }
+
+  .theme-dark .skip-link {
+    background: var(--cyan);
+    color: var(--night-ink);
+    font-weight: 700;
+    text-shadow: none;
+  }
+
+  /* ------------------------------------------------------------------------
+     3D background
+     ------------------------------------------------------------------------ */
+
+  .space-canvas {
+    position: fixed;
+    z-index: -1;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  /* Still backdrop for browsers without WebGL, or if the 3D library fails to load. */
+  .no-webgl {
+    background:
+      radial-gradient(60rem 40rem at 82% 18%, rgb(var(--cyan-rgb) / 14%), transparent 70%),
+      radial-gradient(50rem 36rem at 10% 78%, rgb(var(--emerald-rgb) / 9%), transparent 70%),
+      linear-gradient(rgb(var(--cyan-rgb) / 4%) 1px, transparent 1px) 0 0 / 96px 96px,
+      linear-gradient(90deg, rgb(var(--cyan-rgb) / 4%) 1px, transparent 1px) 0 0 / 96px 96px,
+      var(--space);
+    background-attachment: fixed;
+  }
+
+  /* ------------------------------------------------------------------------
+     Type
+     ------------------------------------------------------------------------ */
+
+  .theme-dark h1,
+  .theme-dark h2,
+  .theme-dark h3 {
+    color: #ffffff;
+    letter-spacing: -0.03em;
+  }
+
+  .theme-dark p,
+  .theme-dark li,
+  .theme-dark dd {
+    color: var(--text);
+  }
+
+  .theme-dark a {
+    text-decoration-color: rgb(var(--cyan-rgb) / 45%);
+  }
+
+  .theme-dark .section-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--cyan);
+    font-size: 0.86rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: none;
+  }
+
+  .theme-dark .section-kicker::before {
+    width: 1.6rem;
+    height: 2px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--cyan), var(--emerald));
+    box-shadow: 0 0 10px rgb(var(--cyan-rgb) / 80%);
+    content: "";
+  }
+
+  .theme-dark .section-kicker::after {
+    content: none;
+  }
+
+  /* ------------------------------------------------------------------------
+     Glass panels
+     ------------------------------------------------------------------------ */
+
+  .theme-dark .site-header,
+  .theme-dark .glance-grid,
+  .theme-dark .about-preview,
+  .theme-dark .highlight-carousel,
+  .theme-dark .publication-entry,
+  .theme-dark .about-profile,
+  .theme-dark .terms-block,
+  .theme-dark .article-card,
+  .theme-dark .education-card,
+  .theme-dark .training-panel,
+  .theme-dark .publication-card,
+  .theme-dark .timeline-card,
+  .theme-dark .resume-project-list li,
+  .theme-dark .skill-group,
+  .theme-dark .contact-grid,
+  .theme-dark .portfolio-card,
+  .theme-dark .project-facts,
+  .theme-dark .project-role,
+  .theme-dark .gallery-open,
+  .theme-dark .hero-readout,
+  .theme-dark .portfolio-empty,
+  .theme-dark .project-error,
+  .theme-dark .load-message,
+  .theme-dark .noscript-message,
+  .theme-dark .publication-error,
+  .theme-dark .map-error {
+    border: 1px solid var(--glass-border);
+    border-radius: var(--glass-radius);
+    background: var(--glass-bg);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 6%),
+      0 22px 48px -30px rgb(0 0 0 / 90%);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+  }
+
+  /* ------------------------------------------------------------------------
+     Navigation bar: a floating glass bar
+     ------------------------------------------------------------------------ */
+
+  .theme-dark .site-header {
+    top: 0.75rem;
+    width: min(calc(var(--content-width) + 3rem), calc(100% - 1.5rem));
+    margin: 0.75rem auto 0;
+    /* A darker tint than the cards, so the menu stays readable when bright
+       maps scroll underneath it. */
+    background: linear-gradient(rgb(11 15 25 / 80%), rgb(11 15 25 / 80%)), var(--glass-bg);
+    color: #ffffff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .theme-dark .site-header.is-scrolled {
+    border-color: rgb(var(--cyan-rgb) / 34%);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 6%),
+      0 18px 44px -24px rgb(var(--cyan-rgb) / 55%);
+  }
+
+  .theme-dark .header-inner {
+    width: auto;
+    min-height: 4.25rem;
+    padding-inline: clamp(1rem, 2.5vw, 1.5rem);
+  }
+
+  .theme-dark .wordmark {
+    color: #ffffff;
+    font-size: 1rem;
+    letter-spacing: -0.01em;
+  }
+
+  .theme-dark .wordmark-stamp {
+    border-color: rgb(var(--cyan-rgb) / 70%);
+    border-radius: 10px;
+    background: rgb(var(--cyan-rgb) / 8%);
+    color: var(--cyan);
+    box-shadow: 0 0 18px -6px rgb(var(--cyan-rgb) / 80%);
+  }
+
+  .theme-dark .site-nav a {
+    color: var(--text);
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    text-transform: none;
+    transition: color 0.25s ease;
+  }
+
+  .theme-dark .site-nav a:hover,
+  .theme-dark .site-nav a[aria-current="page"] {
+    color: #ffffff;
+  }
+
+  .theme-dark .site-nav a::after {
+    height: 2px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--cyan), var(--emerald));
+    box-shadow: 0 0 12px rgb(var(--cyan-rgb) / 90%);
+    transition: transform 0.3s var(--ease-out);
+  }
+
+  .theme-dark .menu-toggle {
+    border-color: rgb(var(--cyan-rgb) / 45%);
+    border-radius: 999px;
+    color: #ffffff;
+    letter-spacing: 0.02em;
+    text-transform: none;
+  }
+
+  /* ------------------------------------------------------------------------
+     Buttons and filters: neon pills with a radar ping
+     ------------------------------------------------------------------------ */
+
+  @keyframes radar-ping {
+    0% {
+      box-shadow: 0 0 0 0 rgb(var(--ping-rgb) / 65%), var(--pill-glow);
+    }
+
+    100% {
+      box-shadow: 0 0 0 1.05rem rgb(var(--ping-rgb) / 0%), var(--pill-glow);
+    }
+  }
+
+  .theme-dark .pill-button,
+  .theme-dark .filter-pill,
+  .theme-dark .round-control {
+    --ping-rgb: var(--cyan-rgb);
+    --pill-glow: 0 0 24px -8px rgb(var(--ping-rgb) / 70%);
+    border: 1px solid rgb(var(--ping-rgb) / 55%);
+    background: rgb(var(--ping-rgb) / 7%);
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-shadow: none;
+    box-shadow: var(--pill-glow);
+    transition:
+      color 0.3s ease,
+      background-color 0.3s ease,
+      border-color 0.3s ease,
+      translate 0.3s var(--ease-out);
+  }
+
+  .theme-dark .pill-button {
+    font-size: 0.92rem;
+  }
+
+  .theme-dark .pill-button:hover,
+  .theme-dark .pill-button:focus-visible,
+  .theme-dark .filter-pill:hover,
+  .theme-dark .round-control:hover {
+    border-color: rgb(var(--ping-rgb));
+    background: rgb(var(--ping-rgb) / 16%);
+    color: #ffffff;
+    transform: none;
+    translate: 0 -2px;
+    animation: radar-ping 1.5s ease-out infinite;
+  }
+
+  /* Solid pills: the main action in each group. */
+  .theme-dark .pill-button:not(.pill-button-outline, .pill-button-outline-light),
+  .theme-dark .filter-pill[aria-pressed="true"] {
+    border-color: transparent;
+    background: linear-gradient(100deg, var(--cyan), var(--emerald));
+    color: var(--night-ink);
+    font-weight: 700;
+  }
+
+  .theme-dark .pill-button:not(.pill-button-outline, .pill-button-outline-light):hover,
+  .theme-dark .pill-button:not(.pill-button-outline, .pill-button-outline-light):focus-visible,
+  .theme-dark .filter-pill[aria-pressed="true"]:hover {
+    border-color: transparent;
+    background: linear-gradient(100deg, var(--cyan), var(--emerald));
+    color: var(--night-ink);
+    filter: brightness(1.08);
+  }
+
+  .theme-dark .pill-button-light {
+    --ping-rgb: var(--emerald-rgb);
+  }
+
+  /* Citation buttons repeat on every publication, so they stay outlined. */
+  .theme-dark .citation-actions .pill-button,
+  .theme-dark .citation-actions .pill-button:hover,
+  .theme-dark .citation-actions .pill-button:focus-visible {
+    border-color: rgb(var(--ping-rgb) / 55%);
+    background: rgb(var(--ping-rgb) / 7%);
+    color: #ffffff;
+    font-weight: 600;
+    filter: none;
+  }
+
+  .theme-dark .citation-actions .pill-button:hover,
+  .theme-dark .citation-actions .pill-button:focus-visible {
+    border-color: rgb(var(--ping-rgb));
+    background: rgb(var(--ping-rgb) / 16%);
+  }
+
+  /* The chosen filter keeps pinging so it reads as "live". */
+  .theme-dark .filter-pill[aria-pressed="true"] {
+    animation: radar-ping 2s ease-out infinite;
+  }
+
+  .theme-dark .resume-actions button:disabled,
+  .theme-dark .pill-button:disabled {
+    border-color: rgb(160 176 192 / 28%);
+    background: rgb(160 176 192 / 7%);
+    color: rgb(160 176 192 / 75%);
+    box-shadow: none;
+    filter: none;
+    translate: none;
+    animation: none;
+  }
+
+  .theme-dark .filter-pill {
+    display: inline-flex;
+    min-height: 2.8rem;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem 1.15rem;
+    font-size: 0.9rem;
+  }
+
+  .theme-dark .filter-pill[data-project-filter="spatial-planning"],
+  .theme-dark .filter-pill[data-project-filter="remote-sensing"],
+  .theme-dark .filter-pill[data-publication-filter="conference"],
+  .theme-dark .filter-pill[data-publication-filter="report"] {
+    --ping-rgb: var(--emerald-rgb);
+  }
+
+  .theme-dark .filter-pill:has(.pill-count) {
+    padding-right: 0.7rem;
+  }
+
+  .pill-count {
+    display: grid;
+    min-width: 1.7rem;
+    height: 1.7rem;
+    place-items: center;
+    padding-inline: 0.45rem;
+    border-radius: 999px;
+    background: rgb(var(--ping-rgb) / 16%);
+    color: rgb(var(--ping-rgb));
+    font-size: 0.78rem;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+  }
+
+  .theme-dark .filter-pill[aria-pressed="true"] .pill-count {
+    background: rgb(4 18 26 / 20%);
+    color: var(--night-ink);
+  }
+
+  .theme-dark .round-control {
+    border-radius: 50%;
+    color: var(--cyan);
+  }
+
+  .theme-dark .text-link {
+    color: var(--cyan);
+  }
+
+  /* Form fields (ready for any form added to the site). */
+  .theme-dark input:not([type="checkbox"], [type="radio"], [type="range"]),
+  .theme-dark textarea,
+  .theme-dark select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid rgb(var(--cyan-rgb) / 22%);
+    border-radius: 12px;
+    background: rgb(5 9 17 / 78%);
+    color: #ffffff;
+    font: inherit;
+    text-shadow: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .theme-dark input::placeholder,
+  .theme-dark textarea::placeholder {
+    color: rgb(160 176 192 / 65%);
+  }
+
+  .theme-dark input:not([type="checkbox"], [type="radio"], [type="range"]):focus,
+  .theme-dark textarea:focus,
+  .theme-dark select:focus {
+    border-color: var(--cyan);
+    outline: none;
+    box-shadow:
+      0 0 0 1px var(--cyan),
+      0 0 22px -2px rgb(var(--cyan-rgb) / 65%);
+  }
+
+  .theme-dark label {
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  /* ------------------------------------------------------------------------
+     Bands: transparent, so the planet shows through the whole page
+     ------------------------------------------------------------------------ */
+
+  .theme-dark .hero-band,
+  .theme-dark .glance-band,
+  .theme-dark .about-band,
+  .theme-dark .latest-band,
+  .theme-dark .highlight-band,
+  .theme-dark .publication-band,
+  .theme-dark .page-intro,
+  .theme-dark .terms-band,
+  .theme-dark .map-section {
+    background: none;
+  }
+
+  /* ------------------------------------------------------------------------
+     Home
+     ------------------------------------------------------------------------ */
+
+  .theme-dark .hero-band {
+    color: #ffffff;
+  }
+
+  .theme-dark .hero {
+    padding-block: clamp(4rem, 8vw, 6.5rem);
+  }
+
+  .theme-dark .hero-role {
+    border-color: rgb(var(--cyan-rgb) / 35%);
+    background: rgb(var(--cyan-rgb) / 7%);
+    color: var(--cyan);
+  }
+
+  .theme-dark .hero-role::before {
+    background: var(--emerald);
+    box-shadow: 0 0 0 0 rgb(var(--emerald-rgb) / 70%);
+    animation: beacon 2.4s ease-out infinite;
+  }
+
+  @keyframes beacon {
+    70%,
+    100% {
+      box-shadow: 0 0 0 0.6rem rgb(var(--emerald-rgb) / 0%);
+    }
+  }
+
+  .theme-dark .hero h1 {
+    color: #ffffff;
+    font-size: clamp(3.2rem, 7vw, 6.2rem);
+    font-weight: 700;
+    letter-spacing: -0.055em;
+    line-height: 0.95;
+  }
+
+  .theme-dark .hero h1 span {
+    background: linear-gradient(100deg, var(--cyan), var(--emerald), var(--cyan));
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: var(--cyan);
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+    animation: gradient-pan 7s linear infinite;
+  }
+
+  @keyframes gradient-pan {
+    to {
+      background-position: -200% 0;
+    }
+  }
+
+  .theme-dark .hero-welcome {
+    color: var(--text);
+  }
+
+  .theme-dark .hero-welcome strong {
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  .theme-dark .hero-location {
+    color: var(--text);
+  }
+
+  /* The parcel drawing becomes a framed overlay on the planet: cadastral
+     lines drawn over the Earth. It is left clear (no blur) so the globe
+     stays visible through it. */
+  .theme-dark .hero-art {
+    border: 1px solid rgb(var(--cyan-rgb) / 28%);
+    border-radius: var(--glass-radius);
+    background: rgb(11 15 25 / 12%);
+    box-shadow: 0 0 60px -20px rgb(var(--cyan-rgb) / 45%);
+  }
+
+  .theme-dark .hero-art::before {
+    content: none;
+  }
+
+  .theme-dark .hero-art svg rect {
+    opacity: 0.6;
+  }
+
+  /* Recolour the parcel drawing without touching its markup. */
+  .theme-dark .hero-art svg [stroke="#f3f7f7"] {
+    stroke: rgb(232 241 250 / 78%);
+  }
+
+  .theme-dark .hero-art svg [stroke="#d9f0eb"] {
+    stroke: var(--cyan);
+  }
+
+  .theme-dark .hero-art svg [fill="#d9f0eb"],
+  .theme-dark .hero-art svg [fill="#f3f7f7"] {
+    fill: #e8f1fa;
+  }
+
+  .theme-dark .hero-art svg [fill="#f4a261"] {
+    fill: var(--emerald);
+    stroke: var(--space);
+  }
+
+  .theme-dark .hero-art svg text {
+    font-family: var(--font-heading);
+  }
+
+  .theme-dark .hero-art figcaption {
+    color: var(--text);
+  }
+
+  .theme-dark .glance-fact {
+    border-left-color: var(--glass-border);
+  }
+
+  .theme-dark .glance-fact strong {
+    color: #ffffff;
+    font-size: 1.02rem;
+  }
+
+  .theme-dark .glance-fact span {
+    color: var(--text);
+  }
+
+  .theme-dark .about-preview-copy > p:not(.section-kicker),
+  .theme-dark .latest-copy > p:not(.section-kicker),
+  .theme-dark .highlight-description {
+    color: var(--text);
+  }
+
+  .theme-dark .highlight-subtitle,
+  .theme-dark .slide-counter {
+    border: 1px solid rgb(var(--cyan-rgb) / 30%);
+    background: rgb(var(--cyan-rgb) / 9%);
+    color: var(--cyan);
+    text-shadow: none;
+  }
+
+  .theme-dark .highlight-image,
+  .theme-dark .work-tile,
+  .theme-dark .project-lead-visual {
+    border: 1px solid var(--glass-border);
+    border-radius: var(--glass-radius);
+    background: #0a111e;
+    box-shadow: 0 24px 50px -30px rgb(0 0 0 / 90%);
+  }
+
+  .theme-dark .image-credit {
+    background: rgb(7 10 18 / 70%);
+    color: var(--text);
+  }
+
+  .theme-dark .carousel-controls {
+    border-top-color: var(--glass-border);
+  }
+
+  .theme-dark .carousel-dot {
+    border-color: rgb(var(--cyan-rgb) / 70%);
+  }
+
+  .theme-dark .carousel-dot[aria-current="true"] {
+    border-color: transparent;
+    background: linear-gradient(100deg, var(--cyan), var(--emerald));
+    box-shadow: 0 0 12px rgb(var(--cyan-rgb) / 90%);
+  }
+
+  .theme-dark .work-tile {
+    transition: translate 0.4s ease-in-out, scale 0.4s ease-in-out, border-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  }
+
+  .theme-dark .work-tile:hover,
+  .theme-dark .work-tile:focus-visible {
+    border-color: rgb(var(--cyan-rgb) / 70%);
+    box-shadow:
+      0 0 0 1px rgb(var(--cyan-rgb) / 25%),
+      0 26px 50px -24px rgb(var(--cyan-rgb) / 60%);
+    translate: 0 -6px;
+    scale: 1.015;
+  }
+
+  .theme-dark .work-overlay,
+  .theme-dark .work-caption {
+    background: rgb(7 10 18 / 84%);
+    color: #ffffff;
+  }
+
+  .theme-dark .work-overlay span,
+  .theme-dark .work-caption span {
+    color: var(--cyan);
+  }
+
+  .theme-dark .work-tile::after {
+    border-color: rgb(var(--cyan-rgb) / 55%);
+    background: rgb(7 10 18 / 72%);
+    color: var(--cyan);
+    text-shadow: none;
+  }
+
+  .theme-dark .publication-entry {
+    border-radius: var(--glass-radius);
+    box-shadow:
+      inset 3px 0 0 var(--cyan),
+      inset 0 1px 0 rgb(255 255 255 / 6%),
+      0 22px 48px -30px rgb(0 0 0 / 90%);
+  }
+
+  .theme-dark .publication-label,
+  .theme-dark .timeline-date,
+  .theme-dark .copy-status {
+    color: var(--cyan);
+  }
+
+  .theme-dark .publication-authors,
+  .theme-dark .publication-venue {
+    color: var(--text);
+  }
+
+  /* ------------------------------------------------------------------------
+     Inner page headings
+     ------------------------------------------------------------------------ */
+
+  .theme-dark .page-intro {
+    position: relative;
+    display: grid;
+    min-height: min(58vh, 32rem);
+    align-items: end;
+    padding-block: clamp(4rem, 9vw, 6.5rem) clamp(2rem, 4vw, 3rem);
+  }
+
+  .theme-dark .page-intro .page-shell {
+    position: relative;
+  }
+
+  .theme-dark .page-intro .section-kicker {
+    margin-bottom: 1.1rem;
+    animation: rise-in 0.9s var(--ease-out) 0.05s both;
+  }
+
+  /* White heading with a slow cyan and emerald light passing across it. */
+  .theme-dark .page-intro h1 {
+    width: fit-content;
+    max-width: 100%;
+    margin-bottom: 1.3rem;
+    padding-block: 0.04em 0.1em;
+    background-image: linear-gradient(100deg, #ffffff 0 38%, var(--cyan) 47%, var(--emerald) 53%, #ffffff 62% 100%);
+    background-size: 320% 100%;
+    background-position: 100% 0;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: #ffffff;
+    -webkit-text-fill-color: transparent;
+    font-size: clamp(3rem, 10vw, 7rem);
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    line-height: 0.95;
+    text-shadow: none;
+    animation:
+      rise-in 1s var(--ease-out) 0.16s both,
+      heading-sheen 8s ease-in-out 1.2s infinite;
+  }
+
+  @keyframes heading-sheen {
+    0%,
+    35% {
+      background-position: 100% 0;
+    }
+
+    100% {
+      background-position: 0 0;
+    }
+  }
+
+  .theme-dark .page-intro h1 + p {
+    max-width: 48ch;
+    color: var(--text);
+    font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+    line-height: 1.55;
+    animation: rise-in 0.9s var(--ease-out) 0.34s both;
+  }
+
+  .theme-dark .page-intro p {
+    color: var(--text);
+  }
+
+  @keyframes rise-in {
+    from {
+      opacity: 0;
+      translate: 0 1.6rem;
+    }
+  }
+
+  /* Map-style coordinate readout on the portfolio page. */
+  .theme-dark .hero-readout {
+    position: absolute;
+    right: 0;
+    bottom: 0.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    margin: 0;
+    padding: 0.55rem 1rem;
+    border-radius: 12px;
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: 0.86rem;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.3;
+    white-space: nowrap;
+    animation: rise-in 0.9s var(--ease-out) 0.5s both;
+  }
+
+  .theme-dark .hero-readout-label {
+    color: var(--emerald);
+    font-weight: 600;
+  }
+
+  .theme-dark .hero-readout-value {
+    min-width: 6.1rem;
+  }
+
+  /* ------------------------------------------------------------------------
+     About
+     ------------------------------------------------------------------------ */
+
+  .theme-dark .about-profile {
+    padding: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  .theme-dark .about-bio p {
+    color: var(--text);
+  }
+
+  /* Radar: fixed range rings with a sweep turning behind the portrait. */
+  .theme-dark .portrait-wrap {
+    border: 1px solid rgb(var(--cyan-rgb) / 60%);
+    box-shadow:
+      0 0 0 1.1rem rgb(var(--cyan-rgb) / 5%),
+      0 0 0 2.2rem rgb(var(--cyan-rgb) / 3%),
+      0 0 70px -12px rgb(var(--cyan-rgb) / 55%);
+  }
+
+  .theme-dark .portrait-wrap::after {
+    inset: -2.2rem;
+    border: 0;
+    border-radius: 50%;
+    background:
+      conic-gradient(
+        from 0deg,
+        rgb(var(--emerald-rgb) / 0%) 0deg 230deg,
+        rgb(var(--emerald-rgb) / 34%) 345deg,
+        rgb(var(--emerald-rgb) / 95%) 359deg,
+        rgb(var(--emerald-rgb) / 0%) 360deg
+      ),
+      repeating-radial-gradient(
+        circle,
+        transparent 0 calc(16.6% - 1px),
+        rgb(var(--cyan-rgb) / 22%) calc(16.6% - 1px) 16.6%
+      );
+    animation: radar-sweep 4.5s linear infinite;
+  }
+
+  @keyframes radar-sweep {
+    to {
+      rotate: 360deg;
+    }
+  }
+
+  .theme-dark .portrait-wrap::before {
+    border-color: rgb(var(--cyan-rgb) / 45%);
+    background: rgb(7 10 18 / 88%);
+    color: var(--cyan);
+    box-shadow: 0 0 22px -6px rgb(var(--cyan-rgb) / 80%);
+    text-shadow: none;
+  }
+
+  .theme-dark .terms-block {
+    padding: clamp(1.4rem, 3.5vw, 2.4rem);
+  }
+
+  /* Skills and interests: neon badges that float on a slight 3D tilt. */
+  .theme-dark .term-line {
+    display: flex;
+    max-width: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.95rem 0.8rem;
+    padding-block: 0.4rem;
+    perspective: 900px;
+  }
+
+  .theme-dark .term-line span {
+    --badge-rgb: var(--cyan-rgb);
+    display: inline-flex;
+    padding: 0.5rem 1.05rem;
+    border: 1px solid rgb(var(--badge-rgb) / 55%);
+    border-radius: 999px;
+    background: linear-gradient(180deg, rgb(var(--badge-rgb) / 18%), rgb(var(--badge-rgb) / 4%));
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: 0.92rem;
+    font-weight: 600;
+    text-shadow: none;
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 22%),
+      0 3px 0 rgb(var(--badge-rgb) / 30%),
+      0 14px 24px -10px rgb(var(--badge-rgb) / 60%);
+    transform: rotateX(16deg);
+    animation: badge-float 5.2s ease-in-out infinite;
+  }
+
+  .theme-dark .term-line span:nth-child(even) {
+    --badge-rgb: var(--emerald-rgb);
+  }
+
+  .theme-dark .term-line span:nth-child(4n + 2) {
+    animation-delay: -1.3s;
+  }
+
+  .theme-dark .term-line span:nth-child(4n + 3) {
+    animation-delay: -2.6s;
+  }
+
+  .theme-dark .term-line span:nth-child(4n) {
+    animation-delay: -3.9s;
+  }
+
+  .theme-dark .term-line span + span::before {
+    content: none;
+  }
+
+  @keyframes badge-float {
+    50% {
+      translate: 0 -7px;
+    }
+  }
+
+  .theme-dark .article-card p,
+  .theme-dark .education-card p,
+  .theme-dark .publication-card p,
+  .theme-dark .skill-group p,
+  .theme-dark .training-panel ul,
+  .theme-dark .map-note,
+  .theme-dark .projects-note,
+  .theme-dark .cv-note,
+  .theme-dark .publication-count {
+    color: var(--text);
+  }
+
+  /* Cards that link somewhere or hold a record lift a little on hover. */
+  .theme-dark .article-card,
+  .theme-dark .publication-card,
+  .theme-dark .education-card,
+  .theme-dark .resume-project-list li,
+  .theme-dark .skill-group {
+    transition: translate 0.4s ease-in-out, border-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  }
+
+  .theme-dark .article-card:hover,
+  .theme-dark .publication-card:hover,
+  .theme-dark .education-card:hover,
+  .theme-dark .resume-project-list li:hover,
+  .theme-dark .skill-group:hover {
+    border-color: rgb(var(--cyan-rgb) / 55%);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 10%),
+      0 24px 50px -26px rgb(var(--cyan-rgb) / 55%);
+    translate: 0 -4px;
+  }
+
+  .theme-dark #work-map,
+  .theme-dark .project-location-map {
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--glass-radius);
+    background: #0a111e;
+    box-shadow: 0 24px 50px -30px rgb(0 0 0 / 90%);
+  }
+
+  /* ------------------------------------------------------------------------
+     Resume
+     ------------------------------------------------------------------------ */
+
+  /* GPS route. The dashed line is the planned route; the bright line is the
+     distance travelled, which grows as the page scrolls (theme-fx.js). */
+  .theme-dark .timeline::before {
+    width: 2px;
+    background: repeating-linear-gradient(180deg, rgb(160 176 192 / 38%) 0 6px, transparent 6px 14px);
+  }
+
+  .theme-dark .timeline::after {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1.5rem;
+    height: calc(var(--route-progress, 1) * 100%);
+    min-height: 1.5rem;
+    background:
+      radial-gradient(
+        circle at 50% calc(100% - 0.75rem),
+        #ffffff 0 0.2rem,
+        var(--emerald) 0.22rem 0.44rem,
+        rgb(var(--emerald-rgb) / 28%) 0.46rem 0.72rem,
+        transparent 0.74rem
+      ),
+      linear-gradient(180deg, var(--cyan), var(--emerald)) center top / 3px calc(100% - 0.75rem) no-repeat;
+    content: "";
+    filter: drop-shadow(0 0 8px rgb(var(--cyan-rgb) / 90%)) drop-shadow(0 0 20px rgb(var(--emerald-rgb) / 55%));
+    pointer-events: none;
+    translate: -50% 0;
+    transition: height 0.2s linear;
+  }
+
+  .theme-dark .timeline-item::before {
+    border: 2px solid #ffffff;
+    background: var(--emerald);
+    box-shadow:
+      0 0 0 4px rgb(var(--emerald-rgb) / 22%),
+      0 0 18px rgb(var(--emerald-rgb) / 90%);
+    transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+  }
+
+  .theme-dark .timeline-card {
+    transition: opacity 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+  }
+
+  /* With the script running, waypoints start unlit and switch on as the
+     route reaches them. */
+  .route-ready .theme-dark .timeline-item:not(.is-reached)::before {
+    border-color: rgb(160 176 192 / 55%);
+    background: var(--space);
+    box-shadow: none;
+  }
+
+  .route-ready .theme-dark .timeline-item:not(.is-reached) .timeline-card {
+    opacity: 0.5;
+  }
+
+  .route-ready .theme-dark .timeline-item.is-reached .timeline-card {
+    border-color: rgb(var(--cyan-rgb) / 48%);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 10%),
+      0 24px 50px -26px rgb(var(--cyan-rgb) / 60%);
+  }
+
+  .theme-dark .cv-note {
+    margin: 0;
+  }
+
+  .theme-dark .timeline-card p:last-child {
+    color: var(--text);
+  }
+
+  .theme-dark .resume-project-list li {
+    color: #ffffff;
+    text-shadow: none;
+  }
+
+  .theme-dark .resume-project-list li::before {
+    border: 1px solid rgb(var(--cyan-rgb) / 40%);
+    background: rgb(var(--cyan-rgb) / 10%);
+    color: var(--cyan);
+  }
+
+  .theme-dark .resume-project-list a {
+    color: #ffffff;
+    text-decoration-color: rgb(var(--cyan-rgb) / 55%);
+  }
+
+  .theme-dark .resume-project-list a:hover {
+    color: var(--cyan);
+  }
+
+  .theme-dark .skill-group {
+    box-shadow:
+      inset 3px 0 0 var(--cyan),
+      inset 0 1px 0 rgb(255 255 255 / 6%),
+      0 22px 48px -30px rgb(0 0 0 / 90%);
+  }
+
+  .theme-dark .skill-group:nth-child(even) {
+    box-shadow:
+      inset 3px 0 0 var(--emerald),
+      inset 0 1px 0 rgb(255 255 255 / 6%),
+      0 22px 48px -30px rgb(0 0 0 / 90%);
+  }
+
+  .theme-dark .training-panel details {
+    border-top-color: var(--glass-border);
+  }
+
+  .theme-dark .training-panel summary {
+    color: var(--cyan);
+  }
+
+  .theme-dark .training-panel li::marker {
+    color: var(--emerald);
+  }
+
+  /* ------------------------------------------------------------------------
+     Publications
+     ------------------------------------------------------------------------ */
+
+  .theme-dark .citation-note {
+    border-left-color: var(--emerald);
+  }
+
+  .theme-dark .citation-authors strong {
+    color: #ffffff;
+  }
+
+  /* ------------------------------------------------------------------------
+     Contact: a spatial dashboard
+     ------------------------------------------------------------------------ */
+
+  .theme-dark .contact-grid {
+    position: relative;
+    max-width: 60rem;
+    gap: 1.1rem;
+    overflow: hidden;
+    padding: clamp(1.6rem, 4vw, 2.8rem);
+    background:
+      linear-gradient(rgb(var(--cyan-rgb) / 5%) 1px, transparent 1px) 0 0 / 32px 32px,
+      linear-gradient(90deg, rgb(var(--cyan-rgb) / 5%) 1px, transparent 1px) 0 0 / 32px 32px,
+      var(--glass-bg);
+  }
+
+  /* Corner brackets, as on a map viewer or instrument panel. */
+  .theme-dark .contact-grid::before {
+    position: absolute;
+    inset: 0.7rem;
+    background:
+      linear-gradient(var(--cyan), var(--cyan)) left top / 1.4rem 2px,
+      linear-gradient(var(--cyan), var(--cyan)) left top / 2px 1.4rem,
+      linear-gradient(var(--cyan), var(--cyan)) right top / 1.4rem 2px,
+      linear-gradient(var(--cyan), var(--cyan)) right top / 2px 1.4rem,
+      linear-gradient(var(--emerald), var(--emerald)) left bottom / 1.4rem 2px,
+      linear-gradient(var(--emerald), var(--emerald)) left bottom / 2px 1.4rem,
+      linear-gradient(var(--emerald), var(--emerald)) right bottom / 1.4rem 2px,
+      linear-gradient(var(--emerald), var(--emerald)) right bottom / 2px 1.4rem;
+    background-repeat: no-repeat;
+    content: "";
+    opacity: 0.85;
+    pointer-events: none;
+  }
+
+  /* Scan line. */
+  .theme-dark .contact-grid::after {
+    position: absolute;
+    inset: 0 0 auto;
+    height: 38%;
+    background: linear-gradient(180deg, transparent, rgb(var(--cyan-rgb) / 9%) 92%, rgb(var(--cyan-rgb) / 45%) 100%);
+    content: "";
+    pointer-events: none;
+    translate: 0 -100%;
+    animation: dashboard-scan 6.5s linear infinite;
+  }
+
+  @keyframes dashboard-scan {
+    to {
+      translate: 0 265%;
+    }
+  }
+
+  .theme-dark .contact-card {
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgb(var(--cyan-rgb) / 24%);
+    border-radius: 14px;
+    background: rgb(5 9 17 / 74%);
+    color: #ffffff;
+    box-shadow: none;
+    text-shadow: none;
+    transition: translate 0.4s ease-in-out, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .theme-dark .contact-card:hover,
+  .theme-dark .contact-card:focus-visible {
+    border-color: var(--cyan);
+    box-shadow:
+      0 0 0 1px var(--cyan),
+      0 0 30px -4px rgb(var(--cyan-rgb) / 70%);
+    translate: 0 -4px;
+  }
+
+  .theme-dark .contact-card strong {
+    color: #ffffff;
+    font-size: 1.02rem;
+  }
+
+  .theme-dark .contact-card span {
+    color: var(--text);
+  }
+
+  .theme-dark .contact-icon {
+    --ping-rgb: var(--cyan-rgb);
+    --pill-glow: 0 0 20px -6px rgb(var(--cyan-rgb) / 90%);
+    border-color: var(--cyan);
+    background: rgb(var(--cyan-rgb) / 8%);
+    color: var(--cyan) !important;
+    box-shadow: var(--pill-glow);
+  }
+
+  .theme-dark .contact-card:hover .contact-icon,
+  .theme-dark .contact-card:focus-visible .contact-icon {
+    animation: radar-ping 1.5s ease-out infinite;
+  }
+
+  /* ------------------------------------------------------------------------
+     Portfolio
+     ------------------------------------------------------------------------ */
+
+  .theme-dark .portfolio-content {
+    padding-block: 2.5rem var(--band-space);
+  }
+
+  .theme-dark .portfolio-toolbar {
+    gap: 1.3rem;
+    margin-bottom: 2.6rem;
+  }
+
+  .theme-dark .portfolio-toolbar p {
+    color: var(--text);
+  }
+
+  .theme-dark .portfolio-toolbar .portfolio-count {
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+  }
+
+  .theme-dark .illustration-note {
+    font-size: 0.9rem;
+  }
+
+  .theme-dark .filter-pills {
+    gap: 0.7rem;
+  }
+
+  .theme-dark .portfolio-grid {
+    gap: 1.6rem;
+  }
+
+  .theme-dark .portfolio-card {
+    --accent-rgb: var(--cyan-rgb);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0.7rem 0.7rem 1rem;
+    color: #ffffff;
+    transform: perspective(1100px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+    transition:
+      transform 0.4s ease-in-out,
+      translate 0.4s ease-in-out,
+      scale 0.4s ease-in-out,
+      border-color 0.4s ease-in-out,
+      box-shadow 0.4s ease-in-out;
+  }
+
+  .theme-dark .portfolio-card[hidden] {
+    display: none;
+  }
+
+  .theme-dark .portfolio-card[data-category="spatial-planning"],
+  .theme-dark .portfolio-card[data-category="remote-sensing"] {
+    --accent-rgb: var(--emerald-rgb);
+  }
+
+  /* While the pointer is steering the tilt, follow it closely. */
+  .theme-dark .portfolio-card.is-tilting {
+    transition:
+      transform 0.16s ease-out,
+      translate 0.4s ease-in-out,
+      scale 0.4s ease-in-out,
+      border-color 0.4s ease-in-out,
+      box-shadow 0.4s ease-in-out;
+  }
+
+  /* Light that follows the pointer across the glass. */
+  .theme-dark .portfolio-card::before {
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(
+      22rem circle at var(--light-x, 50%) var(--light-y, 0%),
+      rgb(var(--accent-rgb) / 16%),
+      transparent 62%
+    );
+    content: "";
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease-in-out;
+  }
+
+  /* Faint contour lines, visible only on hover. */
+  .theme-dark .portfolio-card::after {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    border-radius: inherit;
+    background: var(--topo) center / cover no-repeat;
+    content: "";
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .theme-dark .portfolio-card-figure,
+  .theme-dark .portfolio-card-meta {
+    position: relative;
+    z-index: 1;
+  }
+
+  .theme-dark .portfolio-card:hover,
+  .theme-dark .portfolio-card:focus-visible {
+    z-index: 1;
+    border-color: rgb(var(--accent-rgb) / 75%);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 14%),
+      0 0 0 1px rgb(var(--accent-rgb) / 30%),
+      0 30px 60px -24px rgb(var(--accent-rgb) / 62%),
+      0 0 58px -10px rgb(var(--accent-rgb) / 50%);
+    translate: 0 -8px;
+    scale: 1.02;
+  }
+
+  .theme-dark .portfolio-card:hover::before,
+  .theme-dark .portfolio-card:focus-visible::before {
+    opacity: 1;
+  }
+
+  .theme-dark .portfolio-card:hover::after,
+  .theme-dark .portfolio-card:focus-visible::after {
+    opacity: 0.2;
+  }
+
+  .theme-dark .portfolio-card-visual {
+    border-radius: 11px;
+    background: #0a111e;
+    box-shadow: none;
+  }
+
+  /* Hairline over the image so bright maps sit inside the glass. */
+  .theme-dark .portfolio-card-visual::after {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset 0 0 0 1px rgb(var(--cyan-rgb) / 16%);
+    content: "";
+    pointer-events: none;
+  }
+
+  .theme-dark .portfolio-card-visual > img,
+  .theme-dark .portfolio-card-visual > .project-illustration {
+    filter: brightness(0.9) saturate(1.04);
+    transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
+  }
+
+  .theme-dark .portfolio-card:hover .portfolio-card-visual > img,
+  .theme-dark .portfolio-card:hover .portfolio-card-visual > .project-illustration,
+  .theme-dark .portfolio-card:focus-visible .portfolio-card-visual > img,
+  .theme-dark .portfolio-card:focus-visible .portfolio-card-visual > .project-illustration {
+    filter: none;
+    transform: scale(1.05);
+  }
+
+  /* The title sits on the card itself, so the hover overlay is not needed. */
+  .theme-dark .portfolio-overlay {
+    display: none;
+  }
+
+  .theme-dark .portfolio-card-figure {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  .theme-dark .portfolio-touch-caption {
+    display: block;
+    flex: 1;
+    padding: 1rem 0.45rem 0;
+    border-radius: 0;
+    background: none;
+    color: #ffffff;
+  }
+
+  .theme-dark .portfolio-touch-caption strong,
+  .theme-dark .portfolio-touch-caption span {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+  }
+
+  .theme-dark .portfolio-touch-caption strong {
+    font-family: var(--font-heading);
+    font-size: 1.08rem;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    line-height: 1.3;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
+
+  .theme-dark .portfolio-touch-caption span {
+    margin-top: 0.45rem;
+    color: var(--text);
+    font-size: 0.86rem;
+    line-height: 1.45;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+
+  .theme-dark .portfolio-card-meta {
+    align-items: center;
+    margin-top: 0.95rem;
+    padding: 0.8rem 0.45rem 0;
+    border-top: 1px solid var(--glass-border);
+    color: var(--text);
+    font-size: 0.8rem;
+  }
+
+  .theme-dark .portfolio-card-meta .category-key {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgb(var(--accent-rgb));
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  .theme-dark .portfolio-card-meta .category-key::before {
+    width: 0.5rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: rgb(var(--accent-rgb));
+    box-shadow: 0 0 10px rgb(var(--accent-rgb) / 90%);
+    content: "";
+  }
+
+  .theme-dark .portfolio-card-meta span:last-child {
+    text-align: right;
+  }
+
+  /* Illustrative graphics for projects without a reviewed image. */
+  .theme-dark .project-illustration,
+  .theme-dark .work-art,
+  .theme-dark .highlight-image svg {
+    --slate-deep: #060b15;
+    --slate: #0a1524;
+    --plum: var(--cyan);
+    --mist: #d6ecff;
+    --rose: var(--emerald);
+    --peach: var(--cyan);
+  }
+
+  .theme-dark .project-illustration .art-ground-2 {
+    fill: #0c2032;
+  }
+
+  .theme-dark .project-illustration .art-parcel-labels {
+    font-family: var(--font-heading);
+  }
+
+  .theme-dark .portfolio-empty,
+  .theme-dark .project-error,
+  .theme-dark .load-message,
+  .theme-dark .noscript-message,
+  .theme-dark .publication-error,
+  .theme-dark .map-error {
+    padding: 1rem 1.2rem;
+    border-left: 3px solid var(--cyan);
+    color: #ffffff;
+  }
+
+  .theme-dark .noscript-message a {
+    color: var(--cyan);
+  }
+
+  /* ------------------------------------------------------------------------
+     Project detail
+     ------------------------------------------------------------------------ */
+
+  .theme-dark .project-lead figcaption,
+  .theme-dark .project-subtitle,
+  .theme-dark .project-description p,
+  .theme-dark .project-delivered ul,
+  .theme-dark .project-location > p:not(.project-map-credit),
+  .theme-dark .project-location .project-map-credit,
+  .theme-dark .lightbox-header p,
+  .theme-dark .lightbox-caption,
+  .theme-dark .project-pagination span {
+    color: var(--text);
+  }
+
+  .theme-dark .project-detail-heading h1 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 700;
+    letter-spacing: -0.045em;
+    line-height: 1.05;
+  }
+
+  .theme-dark .project-facts {
+    overflow: hidden;
+  }
+
+  .theme-dark .project-fact {
+    border-color: var(--glass-border);
+  }
+
+  .theme-dark .project-fact dt {
+    color: var(--cyan);
+    letter-spacing: 0.02em;
+    text-transform: none;
+  }
+
+  .theme-dark .project-fact dd {
+    color: #e8f1fa;
+  }
+
+  .theme-dark .project-location-list li {
+    border-color: var(--glass-border);
+    background: rgb(var(--cyan-rgb) / 6%);
+    color: #e8f1fa;
+  }
+
+  .theme-dark .project-map-credit a,
+  .theme-dark .project-pagination a {
+    color: var(--cyan);
+  }
+
+  .theme-dark .project-delivered li::marker {
+    color: var(--emerald);
+  }
+
+  .theme-dark .project-role {
+    box-shadow:
+      inset 3px 0 0 var(--emerald),
+      inset 0 1px 0 rgb(255 255 255 / 6%),
+      0 22px 48px -30px rgb(0 0 0 / 90%);
+  }
+
+  .theme-dark .gallery-open {
+    overflow: hidden;
+    color: #ffffff;
+    transition: translate 0.4s ease-in-out, border-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  }
+
+  .theme-dark .gallery-open:hover,
+  .theme-dark .gallery-open:focus-visible {
+    border-color: rgb(var(--cyan-rgb) / 70%);
+    box-shadow: 0 26px 50px -24px rgb(var(--cyan-rgb) / 60%);
+    translate: 0 -6px;
+  }
+
+  .theme-dark .gallery-caption {
+    background: none;
+    color: var(--text);
+  }
+
+  .theme-dark .image-lightbox {
+    border: 1px solid rgb(var(--cyan-rgb) / 30%);
+    border-radius: var(--glass-radius);
+    background: rgb(9 13 22 / 94%);
+    color: var(--text);
+    box-shadow: 0 0 80px -20px rgb(var(--cyan-rgb) / 60%);
+  }
+
+  .theme-dark .image-lightbox::backdrop {
+    background: rgb(3 6 12 / 82%);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+  }
+
+  .theme-dark .lightbox-controls .round-control {
+    background: rgb(var(--cyan-rgb) / 7%);
+  }
+
+  .theme-dark .project-pagination {
+    border-top-color: var(--glass-border);
+  }
+
+  .theme-dark .project-pagination strong {
+    color: #ffffff;
+  }
+
+  /* ------------------------------------------------------------------------
+     404
+     ------------------------------------------------------------------------ */
+
+  .theme-dark .not-found .error-code {
+    color: var(--cyan);
+  }
+
+  .theme-dark .not-found h1 {
+    font-size: clamp(2.4rem, 6vw, 4.5rem);
+    letter-spacing: -0.045em;
+  }
+
+  .theme-dark .not-found p:not(.error-code) {
+    color: var(--text);
+  }
+
+  /* ------------------------------------------------------------------------
+     Contact band and footer
+     ------------------------------------------------------------------------ */
+
+  .theme-dark .contact-band {
+    border-top: 1px solid rgb(var(--cyan-rgb) / 9%);
+    background:
+      radial-gradient(ellipse 60% 90% at 50% 118%, rgb(var(--emerald-rgb) / 22%), transparent 70%),
+      radial-gradient(ellipse 50% 70% at 50% 110%, rgb(var(--cyan-rgb) / 24%), transparent 72%);
+    color: #ffffff;
+  }
+
+  .theme-dark .contact-inner::before,
+  .theme-dark .contact-inner::after {
+    border-color: rgb(var(--cyan-rgb) / 30%);
+  }
+
+  .theme-dark .contact-inner::before {
+    box-shadow: 0 0 0 1.2rem rgb(var(--cyan-rgb) / 5%), 0 0 0 2.4rem rgb(var(--cyan-rgb) / 3%);
+  }
+
+  .theme-dark .contact-inner::after {
+    border-color: rgb(var(--emerald-rgb) / 30%);
+    box-shadow: 0 0 0 1.2rem rgb(var(--emerald-rgb) / 5%), 0 0 0 2.4rem rgb(var(--emerald-rgb) / 3%);
+  }
+
+  .theme-dark .contact-inner .section-kicker {
+    color: var(--cyan);
+  }
+
+  .theme-dark .contact-inner h2 {
+    color: #ffffff;
+    font-size: clamp(2.1rem, 5vw, 3.6rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1.02;
+  }
+
+  .theme-dark .contact-inner > p:not(.section-kicker) {
+    margin-bottom: 2rem;
+    color: var(--text);
+  }
+
+  /* The main call to action pings all the time. */
+  .theme-dark .contact-band .pill-button {
+    min-height: 3.5rem;
+    padding: 0.85rem 2.2rem;
+    font-size: 1.02rem;
+    animation: radar-ping 2.2s ease-out infinite;
+  }
+
+  .theme-dark .site-footer {
+    color: #ffffff;
+  }
+
+  .theme-dark .footer-main {
+    border-top: 1px solid var(--glass-border);
+    background: rgb(7 10 18 / 72%);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+  }
+
+  .theme-dark .footer-content h2,
+  .theme-dark .footer-contact h3 {
+    color: #ffffff;
+  }
+
+  .theme-dark .footer-content p {
+    color: var(--text);
+  }
+
+  .theme-dark .footer-eyebrow {
+    color: var(--cyan) !important;
+    font-size: 0.86rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: none;
+  }
+
+  .theme-dark .social-link {
+    --ping-rgb: var(--cyan-rgb);
+    --pill-glow: 0 0 20px -8px rgb(var(--cyan-rgb) / 80%);
+    border-color: rgb(var(--cyan-rgb) / 50%);
+    color: #ffffff;
+    box-shadow: var(--pill-glow);
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, translate 0.3s var(--ease-out);
+  }
+
+  .theme-dark .social-link:hover {
+    border-color: var(--cyan);
+    background: var(--cyan);
+    color: var(--night-ink);
+    translate: 0 -3px;
+    animation: radar-ping 1.5s ease-out infinite;
+  }
+
+  .theme-dark .copyright-bar {
+    border-top: 1px solid rgb(var(--cyan-rgb) / 8%);
+    background: rgb(5 8 14 / 92%);
+    color: var(--text);
+  }
+
+  .theme-dark .back-to-top {
+    border: 1px solid rgb(var(--cyan-rgb) / 55%);
+    background: rgb(7 10 18 / 82%);
+    color: var(--cyan);
+    box-shadow: 0 0 26px -6px rgb(var(--cyan-rgb) / 80%);
+    text-shadow: none;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: opacity 0.3s ease, transform 0.3s var(--ease-out), background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .theme-dark .back-to-top:hover {
+    background: var(--cyan);
+    color: var(--night-ink);
+  }
+
+  /* ------------------------------------------------------------------------
+     Maps (Leaflet) in the dark theme
+     ------------------------------------------------------------------------ */
+
+  .theme-dark .leaflet-container {
+    background: #0a111e;
+    font-family: var(--font-body);
+    text-shadow: none;
+  }
+
+  /* The map tiles are light, so invert them and pull the colour back. */
+  .theme-dark .leaflet-tile-pane {
+    filter: invert(1) hue-rotate(185deg) brightness(0.92) contrast(0.92) saturate(0.55);
+  }
+
+  .theme-dark .leaflet-bar a,
+  .theme-dark .leaflet-control-attribution {
+    border-color: var(--glass-border);
+    background: rgb(9 13 22 / 88%);
+    color: #e8f1fa;
+  }
+
+  .theme-dark .leaflet-control-layers,
+  .theme-dark .leaflet-control-scale-line {
+    border: 1px solid var(--glass-border);
+    background: rgb(9 13 22 / 90%);
+    color: #e8f1fa;
+    text-shadow: none;
+  }
+
+  .theme-dark .leaflet-control-layers label,
+  .theme-dark .leaflet-control-layers span {
+    color: #e8f1fa;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+
+  .theme-dark .leaflet-control-layers input {
+    width: auto;
+    padding: 0;
+    accent-color: var(--cyan);
+  }
+
+  .theme-dark .leaflet-control-attribution a {
+    color: var(--cyan);
+  }
+
+  .theme-dark .leaflet-popup-content-wrapper,
+  .theme-dark .leaflet-popup-tip {
+    border: 1px solid rgb(var(--cyan-rgb) / 30%);
+    background: rgb(9 13 22 / 96%);
+    color: #e8f1fa;
+    box-shadow: 0 0 30px -8px rgb(var(--cyan-rgb) / 60%);
+  }
+
+  .theme-dark .leaflet-popup-content p,
+  .theme-dark .leaflet-popup-content {
+    color: #e8f1fa;
+  }
+
+  .theme-dark .leaflet-container a.leaflet-popup-close-button {
+    color: var(--cyan);
+  }
+
+  /* ------------------------------------------------------------------------
+     Scroll reveal. The hidden state applies only once the script is running
+     (.fx-ready), so pages stay readable without JavaScript.
+     ------------------------------------------------------------------------ */
+
+  .fx-ready .theme-dark .reveal {
+    opacity: 0;
+  }
+
+  .fx-ready .theme-dark .reveal.is-visible {
+    opacity: 1;
+    animation: rise-in 0.75s var(--ease-out) var(--reveal-delay, 0ms) backwards;
+  }
+
+  /* ------------------------------------------------------------------------
+     Smaller screens
+     ------------------------------------------------------------------------ */
+
+  @media (max-width: 900px) {
+    .theme-dark .site-header {
+      top: 0.5rem;
+      width: calc(100% - 1rem);
+      margin-top: 0.5rem;
+    }
+
+    :root.js .theme-dark .site-nav {
+      top: calc(100% + 0.5rem);
+      overflow: hidden;
+      border: 1px solid rgb(var(--cyan-rgb) / 28%);
+      border-radius: var(--glass-radius);
+      background: #090d16;
+      box-shadow: 0 24px 40px -20px rgb(0 0 0 / 85%);
+    }
+
+    .theme-dark .site-nav a {
+      border-top-color: rgb(var(--cyan-rgb) / 9%);
+      font-size: 1rem;
+    }
+
+    .theme-dark .site-nav li:first-child a {
+      border-top: 0;
+    }
+
+    .theme-dark .page-intro {
+      min-height: 0;
+      padding-block: 4.5rem 2rem;
+    }
+
+    .theme-dark .hero-readout {
+      position: static;
+      width: fit-content;
+      margin-top: 1.6rem;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .theme-dark .timeline::after {
+      left: 0.5rem;
+    }
+
+    .theme-dark .glance-fact {
+      border-left: 0;
+    }
+
+    .theme-dark .portrait-wrap::after {
+      inset: -1.5rem;
+    }
+
+    .theme-dark .portrait-wrap {
+      box-shadow:
+        0 0 0 0.75rem rgb(var(--cyan-rgb) / 5%),
+        0 0 0 1.5rem rgb(var(--cyan-rgb) / 3%),
+        0 0 50px -12px rgb(var(--cyan-rgb) / 55%);
+    }
+
+    .theme-dark .about-profile {
+      padding-top: 2.6rem;
+    }
+  }
+
+  /* Phones: content panels use a tinted fill instead of a live blur. The
+     planet behind them is small and dim here, so the look is the same and
+     scrolling stays smooth on modest hardware. The menu bar keeps its blur. */
+  @media (max-width: 620px) {
+    .theme-dark .glance-grid,
+    .theme-dark .about-preview,
+    .theme-dark .highlight-carousel,
+    .theme-dark .publication-entry,
+    .theme-dark .about-profile,
+    .theme-dark .terms-block,
+    .theme-dark .article-card,
+    .theme-dark .education-card,
+    .theme-dark .training-panel,
+    .theme-dark .publication-card,
+    .theme-dark .timeline-card,
+    .theme-dark .resume-project-list li,
+    .theme-dark .skill-group,
+    .theme-dark .contact-grid,
+    .theme-dark .portfolio-card,
+    .theme-dark .project-facts,
+    .theme-dark .project-role,
+    .theme-dark .gallery-open,
+    .theme-dark .footer-main {
+      background-color: rgb(14 20 33 / 86%);
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
+    }
+
+    .theme-dark .filter-pill {
+      min-height: 2.75rem;
+      font-size: 0.88rem;
+    }
+
+    .theme-dark .portfolio-grid {
+      gap: 1.25rem;
+    }
+
+    .theme-dark .hero-readout {
+      gap: 0.7rem;
+      font-size: 0.8rem;
+    }
+
+    .theme-dark .hero-readout-value {
+      min-width: 5.6rem;
+    }
+
+    .theme-dark .term-line span {
+      font-size: 0.86rem;
+    }
+  }
+
+  /* Touch screens: no hover, so keep cards flat. */
+  @media (hover: none), (pointer: coarse) {
+    .theme-dark .portfolio-card:hover,
+    .theme-dark .work-tile:hover,
+    .theme-dark .article-card:hover,
+    .theme-dark .publication-card:hover,
+    .theme-dark .education-card:hover,
+    .theme-dark .gallery-open:hover {
+      translate: none;
+      scale: none;
+    }
+
+    .theme-dark .portfolio-card-visual > img,
+    .theme-dark .portfolio-card-visual > .project-illustration {
+      filter: brightness(0.96);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .theme-dark *,
+    .theme-dark *::before,
+    .theme-dark *::after {
+      animation: none !important;
+    }
+
+    .fx-ready .theme-dark .reveal,
+    .fx-ready .theme-dark .reveal.is-visible {
+      opacity: 1;
+    }
+
+    .theme-dark .portfolio-card,
+    .theme-dark .portfolio-card:hover,
+    .theme-dark .portfolio-card:focus-visible {
+      transform: none;
+      translate: none;
+      scale: none;
+    }
+
+    .theme-dark .term-line span {
+      transform: none;
+    }
+  }
+}
+
+/* The 3D background is for screens only. */
+@media print {
+  .space-canvas {
+    display: none !important;
+  }
+}
