@@ -1,0 +1,1073 @@
+/* ==========================================================================
+   Portfolio "night pass" theme
+   Loaded only by portfolio.html, after the shared stylesheets.
+   Everything is scoped to .theme-night so no other page is affected.
+
+   Colour system
+   - Space: near-black blues for the page and panels
+   - Signal: cyan, emerald, electric blue and violet, one per project category
+   - Each card and filter pill carries its category colour as --accent-rgb
+   ========================================================================== */
+
+:root {
+  color-scheme: dark;
+  scrollbar-color: #1fb9c9 #050b16;
+  scrollbar-width: thin;
+}
+
+html {
+  background: #040912;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050b16;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 3px solid #050b16;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #22e4f2, #2ef2a0);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #7df3fb, #7bf7c4);
+}
+
+.theme-night {
+  --n-bg: #040912;
+  --n-panel: #071224;
+  --n-text: #eaf4ff;
+  --n-muted: #93a9c3;
+  --n-line: rgb(170 215 255 / 14%);
+  --n-ink: #03101c;
+
+  --n-cyan-rgb: 34 228 242;
+  --n-emerald-rgb: 46 242 160;
+  --n-blue-rgb: 91 140 255;
+  --n-violet-rgb: 183 156 255;
+  --n-cyan: rgb(var(--n-cyan-rgb));
+  --n-emerald: rgb(var(--n-emerald-rgb));
+  --n-blue: rgb(var(--n-blue-rgb));
+  --n-violet: rgb(var(--n-violet-rgb));
+
+  --font-heading: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+  --focus-ring: var(--n-cyan);
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  background: var(--n-bg);
+  color: var(--n-text);
+  font-size: 1.0625rem;
+}
+
+.theme-night ::selection {
+  background: var(--n-cyan);
+  color: var(--n-ink);
+}
+
+.theme-night :focus-visible {
+  outline: 2px solid var(--n-cyan);
+  outline-offset: 4px;
+}
+
+.theme-night .skip-link {
+  background: var(--n-cyan);
+  color: var(--n-ink);
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   Header
+   -------------------------------------------------------------------------- */
+
+.theme-night .site-header {
+  border-bottom: 1px solid rgb(170 215 255 / 8%);
+  background: rgb(4 9 18 / 62%);
+  color: var(--n-text);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  backdrop-filter: blur(16px) saturate(150%);
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.theme-night .site-header.is-scrolled {
+  border-bottom-color: rgb(var(--n-cyan-rgb) / 22%);
+  background: rgb(4 9 18 / 84%);
+  box-shadow: 0 14px 40px -22px rgb(var(--n-cyan-rgb) / 55%);
+}
+
+.theme-night .wordmark {
+  color: var(--n-text);
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.theme-night .wordmark-stamp {
+  border-color: rgb(var(--n-cyan-rgb) / 70%);
+  border-radius: 10px;
+  background: rgb(var(--n-cyan-rgb) / 8%);
+  color: var(--n-cyan);
+  box-shadow: 0 0 18px -6px rgb(var(--n-cyan-rgb) / 80%);
+}
+
+.theme-night .site-nav a {
+  color: var(--n-muted);
+  font-size: 0.86rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  transition: color 0.25s ease;
+}
+
+.theme-night .site-nav a:hover,
+.theme-night .site-nav a[aria-current="page"] {
+  color: var(--n-text);
+}
+
+.theme-night .site-nav a::after {
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--n-cyan), var(--n-emerald));
+  box-shadow: 0 0 12px rgb(var(--n-cyan-rgb) / 90%);
+  transition: transform 0.3s var(--ease-out);
+}
+
+.theme-night .menu-toggle {
+  border-color: rgb(var(--n-cyan-rgb) / 45%);
+  border-radius: 999px;
+  color: var(--n-text);
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+/* --------------------------------------------------------------------------
+   Hero
+   -------------------------------------------------------------------------- */
+
+.theme-night .page-intro {
+  position: relative;
+  display: grid;
+  min-height: min(82vh, 48rem);
+  align-items: end;
+  overflow: hidden;
+  padding-block: 7rem 4.5rem;
+  background: none;
+  isolation: isolate;
+}
+
+/* The backdrop fades out at the bottom so the hero runs into the page
+   below it without a seam. */
+.hero-backdrop {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(180deg, #000 58%, transparent);
+  mask-image: linear-gradient(180deg, #000 58%, transparent);
+}
+
+/* Survey graticule: faint grid that fades out toward the edges. */
+.hero-backdrop::before {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgb(150 215 255 / 9%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(150 215 255 / 9%) 1px, transparent 1px),
+    linear-gradient(rgb(150 215 255 / 4%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(150 215 255 / 4%) 1px, transparent 1px);
+  background-size: 96px 96px, 96px 96px, 24px 24px, 24px 24px;
+  content: "";
+  -webkit-mask-image: radial-gradient(ellipse 85% 80% at 62% 40%, #000 20%, transparent 78%);
+  mask-image: radial-gradient(ellipse 85% 80% at 62% 40%, #000 20%, transparent 78%);
+}
+
+.hero-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.55;
+  will-change: transform;
+}
+
+.hero-glow-a {
+  top: -22%;
+  right: -6%;
+  width: 46rem;
+  height: 46rem;
+  background: radial-gradient(circle, rgb(var(--n-cyan-rgb) / 50%), transparent 62%);
+  animation: glow-drift-a 22s ease-in-out infinite alternate;
+}
+
+.hero-glow-b {
+  bottom: -38%;
+  left: 18%;
+  width: 40rem;
+  height: 40rem;
+  background: radial-gradient(circle, rgb(var(--n-blue-rgb) / 55%), transparent 62%);
+  animation: glow-drift-b 27s ease-in-out infinite alternate;
+}
+
+.hero-glow-c {
+  top: 8%;
+  left: -14%;
+  width: 30rem;
+  height: 30rem;
+  background: radial-gradient(circle, rgb(var(--n-emerald-rgb) / 34%), transparent 62%);
+  animation: glow-drift-c 31s ease-in-out infinite alternate;
+}
+
+@keyframes glow-drift-a {
+  to {
+    transform: translate3d(-14rem, 7rem, 0) scale(1.15);
+  }
+}
+
+@keyframes glow-drift-b {
+  to {
+    transform: translate3d(12rem, -8rem, 0) scale(0.9);
+  }
+}
+
+@keyframes glow-drift-c {
+  to {
+    transform: translate3d(10rem, 9rem, 0) scale(1.2);
+  }
+}
+
+.hero-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.theme-night .page-intro .page-shell {
+  position: relative;
+}
+
+.theme-night .page-intro .section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.4rem;
+  padding: 0.4rem 0.95rem 0.4rem 0.75rem;
+  border: 1px solid rgb(var(--n-cyan-rgb) / 35%);
+  border-radius: 999px;
+  background: rgb(var(--n-cyan-rgb) / 7%);
+  color: var(--n-cyan);
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+.theme-night .page-intro .section-kicker::before {
+  width: 0.5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--n-emerald);
+  box-shadow: 0 0 0 0 rgb(var(--n-emerald-rgb) / 70%);
+  content: "";
+  animation: beacon 2.4s ease-out infinite;
+}
+
+.theme-night .page-intro .section-kicker::after {
+  content: none;
+}
+
+@keyframes beacon {
+  70%,
+  100% {
+    box-shadow: 0 0 0 0.6rem rgb(var(--n-emerald-rgb) / 0%);
+  }
+}
+
+.theme-night .page-intro h1 {
+  position: relative;
+  width: fit-content;
+  max-width: none;
+  margin-bottom: 1.6rem;
+  padding-block: 0.06em 0.12em;
+  background-image: linear-gradient(
+    100deg,
+    var(--n-cyan) 0%,
+    var(--n-emerald) 26%,
+    #eaf4ff 46%,
+    var(--n-blue) 68%,
+    var(--n-cyan) 100%
+  );
+  background-size: 300% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: var(--n-cyan);
+  -webkit-text-fill-color: transparent;
+  font-size: clamp(3.6rem, 16vw, 13rem);
+  font-weight: 700;
+  letter-spacing: -0.055em;
+  line-height: 0.86;
+  animation:
+    rise-in 1s var(--ease-out) 0.18s both,
+    gradient-pan 9s linear infinite;
+}
+
+/* Soft glow behind the heading. It is a separate, static layer so the
+   moving gradient does not have to be re-blurred on every frame. */
+.theme-night .page-intro h1::before {
+  position: absolute;
+  z-index: -1;
+  inset: 12% -6% -4%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at 34% 55%, rgb(var(--n-cyan-rgb) / 26%), transparent 68%);
+  content: "";
+  filter: blur(44px);
+  pointer-events: none;
+}
+
+@keyframes gradient-pan {
+  to {
+    background-position: -300% 0;
+  }
+}
+
+.theme-night .page-intro h1 + p {
+  max-width: 46ch;
+  color: var(--n-muted);
+  font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+  line-height: 1.55;
+}
+
+.theme-night .page-intro .section-kicker {
+  animation: rise-in 0.9s var(--ease-out) 0.05s both;
+}
+
+.theme-night .page-intro h1 + p {
+  animation: rise-in 0.9s var(--ease-out) 0.38s both;
+}
+
+/* Map status bar: reads out the coordinates under the pointer. */
+.hero-readout {
+  position: absolute;
+  right: 0;
+  bottom: 0.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin: 0;
+  padding: 0.55rem 1rem;
+  border: 1px solid var(--n-line);
+  border-radius: 12px;
+  background: rgb(7 18 36 / 55%);
+  color: var(--n-text);
+  font-family: var(--font-heading);
+  font-size: 0.86rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.3;
+  white-space: nowrap;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  animation: rise-in 0.9s var(--ease-out) 0.55s both;
+}
+
+.hero-readout-label {
+  color: var(--n-emerald);
+  font-weight: 600;
+}
+
+.hero-readout-value {
+  min-width: 6.1rem;
+  color: var(--n-text);
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    translate: 0 1.9rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Page body: static backdrop that scrolls with the content, so the glass
+   cards do not have to re-blur a moving background.
+   -------------------------------------------------------------------------- */
+
+.theme-night main {
+  position: relative;
+  isolation: isolate;
+}
+
+.theme-night main::before {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background:
+    radial-gradient(54rem 34rem at 92% 24%, rgb(var(--n-cyan-rgb) / 13%), transparent 70%),
+    radial-gradient(48rem 34rem at 2% 40%, rgb(var(--n-blue-rgb) / 16%), transparent 70%),
+    radial-gradient(52rem 36rem at 96% 60%, rgb(var(--n-emerald-rgb) / 10%), transparent 70%),
+    radial-gradient(46rem 34rem at 6% 80%, rgb(var(--n-violet-rgb) / 11%), transparent 70%);
+  content: "";
+  pointer-events: none;
+}
+
+.theme-night main::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image:
+    linear-gradient(rgb(150 215 255 / 3.5%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(150 215 255 / 3.5%) 1px, transparent 1px);
+  background-size: 96px 96px;
+  content: "";
+  pointer-events: none;
+}
+
+.theme-night .portfolio-content {
+  padding-block: 3.5rem var(--band-space);
+}
+
+/* --------------------------------------------------------------------------
+   Toolbar and filter pills
+   -------------------------------------------------------------------------- */
+
+.theme-night .portfolio-toolbar {
+  gap: 1.3rem;
+  margin-bottom: 2.6rem;
+}
+
+.theme-night .portfolio-toolbar p {
+  color: var(--n-muted);
+}
+
+.theme-night .portfolio-toolbar .portfolio-count {
+  color: var(--n-text);
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.theme-night .illustration-note {
+  font-size: 0.9rem;
+}
+
+.theme-night .filter-pills {
+  gap: 0.7rem;
+}
+
+.theme-night .filter-pill {
+  --accent-rgb: var(--n-cyan-rgb);
+  display: inline-flex;
+  min-height: 2.9rem;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0.75rem 0.5rem 1.15rem;
+  border: 1px solid rgb(var(--accent-rgb) / 38%);
+  background: rgb(var(--accent-rgb) / 6%);
+  color: var(--n-text);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    translate 0.3s var(--ease-out);
+}
+
+.theme-night .filter-pill[data-project-filter="spatial-planning"] {
+  --accent-rgb: var(--n-blue-rgb);
+}
+
+.theme-night .filter-pill[data-project-filter="remote-sensing"] {
+  --accent-rgb: var(--n-emerald-rgb);
+}
+
+.theme-night .filter-pill[data-project-filter="web-gis"] {
+  --accent-rgb: var(--n-violet-rgb);
+}
+
+.theme-night .filter-pill:hover {
+  border-color: rgb(var(--accent-rgb) / 90%);
+  background: rgb(var(--accent-rgb) / 14%);
+  color: var(--n-text);
+  box-shadow: 0 0 26px -6px rgb(var(--accent-rgb) / 70%);
+  translate: 0 -2px;
+}
+
+.theme-night .filter-pill[aria-pressed="true"] {
+  border-color: rgb(var(--accent-rgb));
+  background: rgb(var(--accent-rgb));
+  color: var(--n-ink);
+  box-shadow:
+    0 0 0 1px rgb(var(--accent-rgb) / 50%),
+    0 10px 30px -8px rgb(var(--accent-rgb) / 85%),
+    0 0 54px -10px rgb(var(--accent-rgb) / 75%);
+}
+
+.theme-night .filter-pill[data-project-filter="all"][aria-pressed="true"] {
+  border-color: transparent;
+  background: linear-gradient(100deg, var(--n-cyan), var(--n-emerald));
+}
+
+.pill-count {
+  display: grid;
+  min-width: 1.75rem;
+  height: 1.75rem;
+  place-items: center;
+  padding-inline: 0.45rem;
+  border-radius: 999px;
+  background: rgb(var(--accent-rgb) / 16%);
+  color: rgb(var(--accent-rgb));
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.theme-night .filter-pill[aria-pressed="true"] .pill-count {
+  background: rgb(3 16 28 / 20%);
+  color: var(--n-ink);
+}
+
+/* Without the script there are no count badges, so even out the padding. */
+.theme-night .filter-pill:not(:has(.pill-count)) {
+  padding-right: 1.15rem;
+}
+
+/* --------------------------------------------------------------------------
+   Glass project cards
+   -------------------------------------------------------------------------- */
+
+.theme-night .portfolio-grid {
+  gap: 1.6rem;
+}
+
+.theme-night .portfolio-card {
+  --accent-rgb: var(--n-cyan-rgb);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0.7rem 0.7rem 1rem;
+  border: 1px solid rgb(190 225 255 / 13%);
+  border-radius: 22px;
+  background: linear-gradient(160deg, rgb(160 205 255 / 10%), rgb(160 205 255 / 3%) 58%);
+  color: var(--n-text);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 9%),
+    0 20px 44px -28px rgb(0 0 0 / 90%);
+  -webkit-backdrop-filter: blur(10px) saturate(140%);
+  backdrop-filter: blur(10px) saturate(140%);
+  transform: perspective(1100px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+  transition:
+    transform 0.4s ease-in-out,
+    translate 0.4s ease-in-out,
+    scale 0.4s ease-in-out,
+    border-color 0.4s ease-in-out,
+    box-shadow 0.4s ease-in-out;
+}
+
+.theme-night .portfolio-card[hidden] {
+  display: none;
+}
+
+.theme-night .portfolio-card[data-category="spatial-planning"] {
+  --accent-rgb: var(--n-blue-rgb);
+}
+
+.theme-night .portfolio-card[data-category="remote-sensing"] {
+  --accent-rgb: var(--n-emerald-rgb);
+}
+
+.theme-night .portfolio-card[data-category="web-gis"] {
+  --accent-rgb: var(--n-violet-rgb);
+}
+
+/* While the pointer is steering the tilt, follow it closely. */
+.theme-night .portfolio-card.is-tilting {
+  transition:
+    transform 0.16s ease-out,
+    translate 0.4s ease-in-out,
+    scale 0.4s ease-in-out,
+    border-color 0.4s ease-in-out,
+    box-shadow 0.4s ease-in-out;
+}
+
+/* Light that follows the pointer across the glass. */
+.theme-night .portfolio-card::before {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    22rem circle at var(--light-x, 50%) var(--light-y, 0%),
+    rgb(var(--accent-rgb) / 20%),
+    transparent 62%
+  );
+  content: "";
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.theme-night .portfolio-card:hover,
+.theme-night .portfolio-card:focus-visible {
+  z-index: 1;
+  border-color: rgb(var(--accent-rgb) / 70%);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 16%),
+    0 0 0 1px rgb(var(--accent-rgb) / 28%),
+    0 30px 60px -24px rgb(var(--accent-rgb) / 62%),
+    0 0 58px -10px rgb(var(--accent-rgb) / 48%);
+  translate: 0 -10px;
+  scale: 1.025;
+}
+
+.theme-night .portfolio-card:hover::before,
+.theme-night .portfolio-card:focus-visible::before {
+  opacity: 1;
+}
+
+.theme-night .portfolio-card:active {
+  scale: 1.01;
+}
+
+.theme-night .portfolio-card-visual {
+  border-radius: 15px;
+  background: var(--n-panel);
+  box-shadow: inset 0 0 0 1px rgb(190 225 255 / 10%);
+}
+
+/* Hairline over the image so bright maps sit inside the glass. */
+.theme-night .portfolio-card-visual::after {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgb(190 225 255 / 14%);
+  content: "";
+  pointer-events: none;
+}
+
+.theme-night .portfolio-card-visual > img,
+.theme-night .portfolio-card-visual > .project-illustration {
+  filter: brightness(0.9) saturate(1.04);
+  transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
+}
+
+.theme-night .portfolio-card:hover .portfolio-card-visual > img,
+.theme-night .portfolio-card:hover .portfolio-card-visual > .project-illustration,
+.theme-night .portfolio-card:focus-visible .portfolio-card-visual > img,
+.theme-night .portfolio-card:focus-visible .portfolio-card-visual > .project-illustration {
+  filter: none;
+  transform: scale(1.05);
+}
+
+/* The title now sits on the card itself, so the hover overlay is not needed. */
+.theme-night .portfolio-overlay {
+  display: none;
+}
+
+.theme-night .portfolio-card-figure {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.theme-night .portfolio-touch-caption {
+  display: block;
+  flex: 1;
+  padding: 1rem 0.45rem 0;
+  border-radius: 0;
+  background: none;
+  color: var(--n-text);
+}
+
+.theme-night .portfolio-touch-caption strong,
+.theme-night .portfolio-touch-caption span {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}
+
+.theme-night .portfolio-touch-caption strong {
+  font-family: var(--font-heading);
+  font-size: 1.08rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.3;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  transition: color 0.4s ease-in-out;
+}
+
+.theme-night .portfolio-card:hover .portfolio-touch-caption strong,
+.theme-night .portfolio-card:focus-visible .portfolio-touch-caption strong {
+  color: rgb(var(--accent-rgb));
+}
+
+.theme-night .portfolio-touch-caption span {
+  margin-top: 0.45rem;
+  color: var(--n-muted);
+  font-size: 0.86rem;
+  line-height: 1.45;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
+.theme-night .portfolio-card-meta {
+  align-items: center;
+  margin-top: 0.95rem;
+  padding: 0.8rem 0.45rem 0;
+  border-top: 1px solid rgb(190 225 255 / 10%);
+  color: var(--n-muted);
+  font-size: 0.8rem;
+}
+
+.theme-night .portfolio-card-meta .category-key {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgb(var(--accent-rgb));
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.theme-night .portfolio-card-meta .category-key::before {
+  width: 0.5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgb(var(--accent-rgb));
+  box-shadow: 0 0 10px rgb(var(--accent-rgb) / 90%);
+  content: "";
+}
+
+.theme-night .portfolio-card-meta span:last-child {
+  text-align: right;
+}
+
+/* Illustrative graphics for projects without a reviewed image. */
+.theme-night .project-illustration {
+  --slate-deep: #050d1b;
+  --slate: #0a1a30;
+  --plum: rgb(var(--accent-rgb));
+  --mist: #d6ecff;
+  --rose: rgb(var(--n-emerald-rgb));
+  --peach: rgb(var(--accent-rgb));
+}
+
+.theme-night .project-illustration .art-ground-2 {
+  fill: #0d2440;
+}
+
+.theme-night .project-illustration .art-parcel-labels {
+  font-family: var(--font-heading);
+}
+
+.theme-night .portfolio-empty,
+.theme-night .load-message,
+.theme-night .noscript-message {
+  border-left: 3px solid var(--n-cyan);
+  border-radius: 0 14px 14px 0;
+  background: rgb(160 205 255 / 6%);
+  color: var(--n-text);
+}
+
+.theme-night .noscript-message a {
+  color: var(--n-cyan);
+}
+
+/* --------------------------------------------------------------------------
+   Scroll reveal. The hidden state only applies once the script has started
+   (.fx-ready), so the page stays readable without JavaScript.
+   -------------------------------------------------------------------------- */
+
+.fx-ready .theme-night .reveal {
+  opacity: 0;
+}
+
+.fx-ready .theme-night .reveal.is-visible {
+  opacity: 1;
+  animation: rise-in 0.75s var(--ease-out) var(--reveal-delay, 0ms) backwards;
+}
+
+/* --------------------------------------------------------------------------
+   Contact band and call to action
+   -------------------------------------------------------------------------- */
+
+.theme-night .contact-band {
+  border-top: 1px solid rgb(170 215 255 / 9%);
+  background:
+    radial-gradient(ellipse 60% 90% at 50% 118%, rgb(var(--n-emerald-rgb) / 30%), transparent 70%),
+    radial-gradient(ellipse 50% 70% at 50% 110%, rgb(var(--n-cyan-rgb) / 32%), transparent 72%),
+    linear-gradient(180deg, rgb(4 9 18 / 0%), #050d1c);
+  color: var(--n-text);
+}
+
+.theme-night .contact-inner::before,
+.theme-night .contact-inner::after {
+  border-color: rgb(var(--n-cyan-rgb) / 30%);
+}
+
+.theme-night .contact-inner::before {
+  box-shadow: 0 0 0 1.2rem rgb(var(--n-cyan-rgb) / 5%), 0 0 0 2.4rem rgb(var(--n-cyan-rgb) / 3%);
+}
+
+.theme-night .contact-inner::after {
+  border-color: rgb(var(--n-emerald-rgb) / 30%);
+  box-shadow: 0 0 0 1.2rem rgb(var(--n-emerald-rgb) / 5%), 0 0 0 2.4rem rgb(var(--n-emerald-rgb) / 3%);
+}
+
+.theme-night .contact-inner .section-kicker {
+  color: var(--n-cyan);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.theme-night .contact-inner .section-kicker::after {
+  width: 2.5rem;
+  height: 2px;
+  margin-inline: auto;
+  background: linear-gradient(90deg, var(--n-cyan), var(--n-emerald));
+  box-shadow: 0 0 12px rgb(var(--n-cyan-rgb) / 80%);
+}
+
+.theme-night .contact-inner h2 {
+  color: var(--n-text);
+  font-size: clamp(2.1rem, 5vw, 3.6rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.02;
+}
+
+.theme-night .contact-inner > p:not(.section-kicker) {
+  margin-bottom: 2rem;
+  color: var(--n-muted);
+}
+
+.theme-night .contact-band .pill-button {
+  min-height: 3.5rem;
+  padding: 0.85rem 2.2rem;
+  border: 0;
+  background: linear-gradient(100deg, var(--n-cyan), var(--n-emerald));
+  color: var(--n-ink);
+  font-size: 1.02rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  box-shadow:
+    0 0 0 0 rgb(var(--n-cyan-rgb) / 55%),
+    0 12px 36px -10px rgb(var(--n-cyan-rgb) / 80%);
+  transition: translate 0.3s var(--ease-out), filter 0.3s ease;
+  animation: cta-pulse 2.8s ease-in-out infinite;
+}
+
+.theme-night .contact-band .pill-button:hover,
+.theme-night .contact-band .pill-button:focus-visible {
+  border: 0;
+  background: linear-gradient(100deg, var(--n-cyan), var(--n-emerald));
+  color: var(--n-ink);
+  filter: brightness(1.1);
+  translate: 0 -3px;
+  transform: none;
+  animation-play-state: paused;
+}
+
+@keyframes cta-pulse {
+  50% {
+    box-shadow:
+      0 0 0 1rem rgb(var(--n-cyan-rgb) / 0%),
+      0 14px 50px -8px rgb(var(--n-emerald-rgb) / 95%);
+    scale: 1.035;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+
+.theme-night .site-footer {
+  color: var(--n-text);
+}
+
+.theme-night .footer-main {
+  border-top: 1px solid rgb(170 215 255 / 9%);
+  background: #050d1c;
+}
+
+.theme-night .footer-content h2,
+.theme-night .footer-contact h3 {
+  color: var(--n-text);
+}
+
+.theme-night .footer-content p {
+  color: var(--n-muted);
+}
+
+.theme-night .footer-eyebrow {
+  color: var(--n-cyan) !important;
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.theme-night .social-link {
+  border-color: rgb(var(--n-cyan-rgb) / 40%);
+  color: var(--n-text);
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, translate 0.3s var(--ease-out);
+}
+
+.theme-night .social-link:hover {
+  border-color: var(--n-cyan);
+  background: var(--n-cyan);
+  color: var(--n-ink);
+  box-shadow: 0 0 26px -4px rgb(var(--n-cyan-rgb) / 85%);
+  translate: 0 -3px;
+}
+
+.theme-night .copyright-bar {
+  border-top: 1px solid rgb(170 215 255 / 7%);
+  background: #030712;
+  color: var(--n-muted);
+}
+
+.theme-night .back-to-top {
+  border: 1px solid rgb(var(--n-cyan-rgb) / 55%);
+  background: rgb(7 18 36 / 80%);
+  color: var(--n-cyan);
+  box-shadow: 0 0 26px -6px rgb(var(--n-cyan-rgb) / 80%);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: opacity 0.3s ease, transform 0.3s var(--ease-out), background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-night .back-to-top:hover {
+  background: var(--n-cyan);
+  color: var(--n-ink);
+}
+
+/* --------------------------------------------------------------------------
+   Smaller screens
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 900px) {
+  :root.js .theme-night .site-nav {
+    border-bottom: 1px solid rgb(var(--n-cyan-rgb) / 22%);
+    background: var(--n-bg);
+    box-shadow: 0 24px 40px -20px rgb(0 0 0 / 80%);
+  }
+
+  .theme-night .site-nav a {
+    border-top-color: rgb(170 215 255 / 9%);
+    font-size: 1rem;
+  }
+
+  .theme-night .page-intro {
+    min-height: min(70vh, 38rem);
+    padding-block: 5rem 3.5rem;
+  }
+
+  .hero-readout {
+    position: static;
+    width: fit-content;
+    margin-top: 1.8rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .theme-night .page-intro {
+    min-height: 0;
+    padding-block: 4.2rem 3rem;
+  }
+
+  .hero-glow {
+    filter: blur(50px);
+  }
+
+  .hero-readout {
+    gap: 0.7rem;
+    font-size: 0.8rem;
+  }
+
+  .hero-readout-value {
+    min-width: 5.6rem;
+  }
+
+  .theme-night .portfolio-content {
+    padding-block: 2.2rem var(--band-space);
+  }
+
+  .theme-night .filter-pills {
+    gap: 0.55rem;
+  }
+
+  .theme-night .filter-pill {
+    min-height: 2.75rem;
+    font-size: 0.88rem;
+  }
+
+  .theme-night .portfolio-grid {
+    gap: 1.25rem;
+  }
+
+  /* One column on a phone means every card is on screen in turn. The
+     backdrop here is almost flat, so a tinted panel looks the same as the
+     blur and scrolls much more smoothly on modest hardware. */
+  .theme-night .portfolio-card {
+    background: linear-gradient(160deg, rgb(21 38 66 / 92%), rgb(8 17 33 / 94%) 58%);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+
+/* Touch screens: no hover, so keep the cards flat and calm. */
+@media (hover: none), (pointer: coarse) {
+  .theme-night .portfolio-card:hover {
+    translate: none;
+    scale: none;
+  }
+
+  .theme-night .portfolio-card-visual > img,
+  .theme-night .portfolio-card-visual > .project-illustration {
+    filter: brightness(0.96);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-glow,
+  .theme-night .page-intro h1,
+  .theme-night .page-intro .section-kicker,
+  .theme-night .page-intro .section-kicker::before,
+  .theme-night .page-intro h1 + p,
+  .hero-readout,
+  .theme-night .contact-band .pill-button {
+    animation: none;
+  }
+
+  .fx-ready .theme-night .reveal,
+  .fx-ready .theme-night .reveal.is-visible {
+    opacity: 1;
+    animation: none;
+  }
+
+  .theme-night .portfolio-card,
+  .theme-night .portfolio-card:hover,
+  .theme-night .portfolio-card:focus-visible {
+    transform: none;
+    translate: none;
+    scale: none;
+  }
+}

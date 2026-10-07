@@ -87,3 +87,28 @@ bar. Internal links remain relative for GitHub Pages sub-path hosting.
   their project match and publication permission are approved.
 - Verify keyboard use, contrast, data loading, and layouts at 380 px, 768 px
   and 1440 px before the Phase 2 review checkpoint.
+
+## Portfolio page: night theme (October 2026)
+
+At the owner's request, `portfolio.html` alone uses a dark "night pass"
+theme. The rest of the site keeps the light theme described above.
+
+- `portfolio.html` carries `class="theme-night"` on `<body>` and loads two
+  extra files after the shared ones: `assets/css/portfolio-night.css` and
+  `assets/js/portfolio-fx.js`. Every rule is scoped to `.theme-night`, so no
+  other page changes. Removing the class and the two files restores the
+  light page.
+- Fonts on this page: Space Grotesk for headings and numbers, Plus Jakarta
+  Sans for body text.
+- Colours: page `#040912`; text `#EAF4FF`; muted text `#93A9C3`. Each project
+  category has one signal colour, used on its filter pill and on its cards:
+  land records cyan `#22E4F2`, spatial planning blue `#5B8CFF`, remote sensing
+  emerald `#2EF2A0`, Web GIS violet `#B79CFF`.
+- Hero: a canvas survey network with a west-to-east swath, and a coordinate
+  readout that follows the pointer (the hero is mapped to the bounds of
+  Punjab; it shows Lahore when idle).
+- Cards: glass panels with the title always visible, a pointer-driven tilt,
+  lift and glow on hover or keyboard focus. On phones the blur is replaced by
+  a tinted panel for smoother scrolling.
+- Motion is switched off under `prefers-reduced-motion`, and the page stays
+  fully readable without JavaScript.
