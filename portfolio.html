@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#2f3e50" />
+    <meta name="theme-color" content="#040912" />
     <meta name="description" content="Browse Farkhanda Akmal's confirmed GIS, land records, spatial planning and remote sensing projects." />
     <meta property="og:title" content="Portfolio | Farkhanda Akmal" />
     <meta property="og:description" content="Confirmed GIS, land records, spatial planning and remote sensing projects." />
@@ -20,18 +20,20 @@
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/tokens.css" />
     <link rel="stylesheet" href="assets/css/base.css" />
     <link rel="stylesheet" href="assets/css/home.css" />
     <link rel="stylesheet" href="assets/css/content.css" />
     <link rel="stylesheet" href="assets/css/portfolio.css" />
+    <link rel="stylesheet" href="assets/css/portfolio-night.css" />
     <script src="assets/js/site.js" defer></script>
     <script src="assets/js/project-art.js" defer></script>
     <script src="assets/js/portfolio.js" defer></script>
+    <script src="assets/js/portfolio-fx.js" defer></script>
     <title>Portfolio | Farkhanda Akmal</title>
   </head>
-  <body>
+  <body class="theme-night">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header" data-site-header>
       <div class="header-inner page-shell">
@@ -45,11 +47,26 @@
     </header>
 
     <main id="main-content">
-      <section class="page-intro" aria-labelledby="page-title">
-        <div class="page-shell"><p class="section-kicker">Projects</p><h1 id="page-title">Portfolio</h1><p>Selected work in land records, spatial planning, Web GIS and remote sensing.</p></div>
+      <section class="page-intro" aria-labelledby="page-title" data-hero>
+        <div class="hero-backdrop" aria-hidden="true">
+          <span class="hero-glow hero-glow-a"></span>
+          <span class="hero-glow hero-glow-b"></span>
+          <span class="hero-glow hero-glow-c"></span>
+          <canvas class="hero-canvas" data-hero-canvas></canvas>
+        </div>
+        <div class="page-shell">
+          <p class="section-kicker">Projects</p>
+          <h1 id="page-title">Portfolio</h1>
+          <p>Selected work in land records, spatial planning, Web GIS and remote sensing.</p>
+          <div class="hero-readout" aria-hidden="true">
+            <span class="hero-readout-label" data-readout-label>Lahore</span>
+            <span class="hero-readout-value" data-readout-lat>31.5204° N</span>
+            <span class="hero-readout-value" data-readout-lon>74.3587° E</span>
+          </div>
+        </div>
       </section>
       <section class="portfolio-content page-shell" aria-label="Project portfolio">
-        <div class="portfolio-toolbar">
+        <div class="portfolio-toolbar" data-reveal>
           <p class="portfolio-count" data-portfolio-count>Loading confirmed projects…</p>
           <div class="filter-pills" data-project-filters aria-label="Filter projects by category">
             <button class="filter-pill" type="button" data-project-filter="all" aria-pressed="true">Show all</button>
@@ -66,11 +83,11 @@
         <noscript><p class="noscript-message">Project listings require JavaScript. View the <a href="resume.html">CV details</a> instead.</p></noscript>
       </section>
       <section class="contact-band content-band" aria-labelledby="contact-title">
-        <div class="contact-inner page-shell"><p class="section-kicker">Professional enquiries</p><h2 id="contact-title">Discuss a project or collaboration</h2><p>For professional enquiries, please get in touch.</p><a class="pill-button pill-button-light" href="contact.html">Contact me</a></div>
+        <div class="contact-inner page-shell" data-reveal><p class="section-kicker">Professional enquiries</p><h2 id="contact-title">Discuss a project or collaboration</h2><p>For professional enquiries, please get in touch.</p><a class="pill-button pill-button-light" href="contact.html">Contact me</a></div>
       </section>
     </main>
     <footer class="site-footer">
-      <div class="footer-main"><div class="page-shell footer-content">
+      <div class="footer-main"><div class="page-shell footer-content" data-reveal>
         <div><p class="footer-eyebrow">GIS · Land records · Research</p><h2>Farkhanda Akmal</h2><p>Lahore, Punjab, Pakistan</p></div>
         <div class="footer-contact"><h3>Contact me</h3><div class="social-links">
           <a class="social-link" href="https://www.linkedin.com/in/farkhandaakmal021" aria-label="LinkedIn profile" target="_blank" rel="noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 8.6H2.1V22h3.1V8.6ZM3.7 2a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 0 0 0-3.6ZM22 14.3c0-4-2.1-5.9-4.9-5.9a4.2 4.2 0 0 0-3.8 2.1V8.6h-3V22h3.1v-6.6c0-1.8.3-3.6 2.6-3.6s2.3 2.1 2.3 3.7V22h3.1l.6-7.7Z" /></svg></a>
