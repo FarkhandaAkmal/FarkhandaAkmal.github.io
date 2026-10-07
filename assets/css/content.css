@@ -182,6 +182,19 @@
   font-weight: 700;
 }
 
+.resume-project-list a {
+  text-decoration-color: rgb(15 118 110 / 35%);
+}
+
+.resume-project-list a:hover {
+  color: var(--plum);
+  text-decoration-color: currentColor;
+}
+
+.projects-more {
+  margin-top: 1.4rem;
+}
+
 .education-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

@@ -1,5 +1,18 @@
 # Items to confirm or supply
 
+## Status update: 7 October 2026
+
+- The site is live at https://farkhandaakmal.github.io/. `sitemap.xml`, canonical links and a social share image (`assets/img/og/farkhanda-akmal-share.jpg`) are in place. If a custom domain is adopted, update those addresses.
+- Three projects were added from Sami Ullah Khan's portfolio document, at the owner's request and with permission to use its maps: District Land Use Plans for Khyber Pakhtunkhwa, Cropland to built-up conversion in Lahore District, and Punjab Affordable Housing Schemes site surveys. Their summaries describe the project only; Farkhanda's own role still needs to be supplied, as for every other project.
+- Flash flood damage assessment 2022 now has three source images from the same document, and Punjab Spatial Strategy has a third map (Spatial Vision of Punjab 2047).
+- The ISPRS Annals petrol-pumps paper (2023) was checked against the publisher's page, which lists F. Akmal as an author, and is now published. The Kuwait Journal of Science entry is a separate record and still has no year, volume or DOI.
+- The River Chenab conference paper now has its DOI.
+- Contractor and consultant names in the Rural Roads GIS viewer image are covered.
+- The 11 unused low-resolution images in `assets/img/` were removed; all project images are in `assets/img/project-maps/`.
+- `TODO.md`, `DESIGN_PLAN.md` and `tools/` are excluded from the published site through `_config.yml`. They remain visible in the public GitHub repository.
+- Still without a real image (illustrative graphic shown): PULSE, Rawalpindi Division, SLIMS Lahore, LDA Industrial Corridor, FGEHF Estate Wing and PEASA. The only Estate Wing images in the reference material are a contract cover and a signature page, which are not suitable.
+- The CV PDF will be supplied later; the download button stays disabled until then.
+
 These items are not published on the website until confirmed.
 
 1. A higher-resolution profile photo at least 800 x 800 px. The supplied 196 x 206 px portrait is now used, but is below the preferred resolution.
@@ -21,7 +34,7 @@ These items are not published on the website until confirmed.
    - PLGA 2019 local areas: `reference material 4/image6.png`, `image7.png`.
    - Aviation-land mapping: `reference material 4/image2.jpeg` is shown only as an abstracted mosaic; `image3.jpeg` remains private because it is a detailed parcel cross-check.
    All 221 other extracted images remain unassigned; their exact paths are listed in the draft JSON. Six images under 200 px are listed in the contact sheet but were not extracted. Check carefully for owner names, CNIC numbers or other personal land-ownership data before publishing any image.
-11. Whether the petrol pumps references describe one paper or two, the Kuwait Journal of Science paper's publication status, and the year of the Narowal rice paper.
+11. The Kuwait Journal of Science petrol-pumps paper's publication status (the ISPRS Annals 2023 paper is confirmed and published separately), and the year of the Narowal rice paper.
 12. Software tools she wants listed.
 13. Optional Google Scholar, ResearchGate and ORCID links.
 14. Optional training providers and years, awards, memberships and languages.
@@ -31,7 +44,7 @@ These items are not published on the website until confirmed.
 ## Phase 0 inventory status
 
 - The source DOCX files are present. The local contact sheet contains 230 extracted images; 6 images under 200 px on their long side were skipped. Sami Ullah Khan's two documents are excluded from image extraction because they are for citation cross-checking only.
-- Git/GitHub setup is intentionally deferred until Phase 6. Keep the project local until then.
+- The project is published from the `main` branch of the GitHub repository.
 - Review the contact sheet to confirm each image's project association and permission. Do not publish an image containing owner names, CNIC numbers or other personal land-ownership data.
 - The CV headshot is 196 x 206 px, below the preferred 800 x 800 px minimum. It is used on the Home and About pages while a higher-resolution photo is still requested.
 
@@ -70,7 +83,10 @@ The owner-specified portfolio projects have been added using the supplied projec
 | Eyris Pakistan |  | Yes |  |
 | Punjab Environmental Assessment System Application (PEASA) | Yes | Yes | Yes |
 | Rural Development Package monitoring dashboard | Yes | Yes |  |
-| Flash flood damage assessment 2022, DG Khan and Rajanpur |  | Yes | Yes |
+| Flash flood damage assessment 2022, DG Khan and Rajanpur |  | Yes |  |
+| District Land Use Plans for Khyber Pakhtunkhwa | Yes | Yes |  |
+| Cropland to built-up conversion in Lahore District (2000 to 2016) |  | Yes |  |
+| Punjab Affordable Housing Schemes: site surveys and land-use assessment | Yes | Yes |  |
 
 Space Technology Application in Socioeconomic Development and Digitization of Roads Directory in the Country (NTRC) remain unconfirmed because client, period, location and summaries were not provided. The SLIMS Lahore source image named in the project brief was excluded: visual review confirmed it shows a Faisalabad government-building inventory rather than SLIMS. Project images that expose individual consumer or parcel data are redacted or omitted.
 
@@ -109,4 +125,4 @@ Space Technology Application in Socioeconomic Development and Digitization of Ro
 
 - Quality checks are in progress. The site uses one light theme only; dark-mode and theme-toggle checks are out of scope, per user instruction.
 - Approved project images must be WebP with descriptive alt text and explicit dimensions. Punjab Spatial Strategy and PLGA 2019 each have two, UIPT has one, Pakistan Railways has two, and Sheesh Mahal, Nankana Sahib, FGEHF, and aviation-land mapping each have one source-derived WebP image.
-- `robots.txt` is ready. `sitemap.xml` awaits the absolute GitHub Pages address, which will be added in Phase 6.
+- `robots.txt` and `sitemap.xml` use the GitHub Pages address https://farkhandaakmal.github.io/.

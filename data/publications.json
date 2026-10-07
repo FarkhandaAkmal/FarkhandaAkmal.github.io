@@ -87,11 +87,11 @@
     "year": 2023,
     "authors": [
       {"name": "Raza, D."},
-      {"name": "Mirza, S. M."},
-      {"name": "Hong, S. Y."},
+      {"name": "Mirza, S."},
+      {"name": "Shu, H."},
       {"name": "Khan, A."},
       {"name": "Tariq, A."},
-      {"name": "Khan, S."},
+      {"name": "Khan, S. U."},
       {"name": "Aeman, H."},
       {"name": "Akmal, F.", "is_farkhanda": true}
     ],
@@ -102,7 +102,7 @@
     "url": "",
     "study_area_coords": [],
     "featured": false,
-    "confirmed": false
+    "confirmed": true
   },
   {
     "id": "photovoltaic-panels-management-2015",
@@ -189,7 +189,7 @@
     "title": "River channel dynamics detection using Remote Sensing and GIS technologies: A case study of River Chenab in Indo-Pak Region",
     "venue": "2017 Fifth International Conference on Aerospace Science & Engineering (ICASE), IEEE",
     "volume_pages": "November, 1–5",
-    "doi": "",
+    "doi": "10.1109/ICASE.2017.8374275",
     "url": "",
     "study_area_coords": [],
     "featured": false,
